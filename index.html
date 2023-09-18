@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jambudweep</title>
+    <link rel="icon" type="image/x-icon" href="./images/footer-logo.png">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="page">
+    <!-- logo section start -->
+    <header>
+        <div class="logo-container">
+            <img src="./images/logo.png" class="logo" />
+        </div>
+    </header>
+
+    <!-- banner section start -->
+    <section class="home">
+        <!-- navbar section start -->
+        <nav class="navbar">
+            <a href="#home" class="navbar-left">
+                <p class="navbar-name">HOME</p>
+            </a>
+            <a href="#about" class="navbar-left">
+                <p class="navbar-name">ABOUT</p>
+            </a>
+            <a href="#contact" class="navbar-right">
+                <p class="navbar-name">CONTACT</p>
+            </a>
+            <a href="#ourServices" class="navbar-right">
+                <p class="navbar-name">SERVICES</p>
+            </a>
+        </nav>
+        <!-- home section start -->
+        <div class="slider" id="home">
+            <div class="slide" style="background-image: url('./images/hero1.png');">
+                <h1 class="slide-text">JAMBUDWEEP <br> SHODH KENDRA</h1>
+            </div>
+            <div class="slide" style="background-image: url('./images/hero2.png');">
+                <h1 class="slide-text">JAMBUDWEEP <br> SHODH KENDRA</h1>
+            </div>
+            <div class="slide" style="background-image: url('./images/hero3.png');">
+                <h1 class="slide-text">JAMBUDWEEP <br> SHODH KENDRA</h1>
+            </div>
+            <div class="slide" style="background-image: url('./images/hero4.png');">
+                <h1 class="slide-text">JAMBUDWEEP <br> SHODH KENDRA</h1>
+            </div>
+            <div class="slide" style="background-image: url('./images/hero5.png');">
+                <h1 class="slide-text">JAMBUDWEEP <br> SHODH KENDRA</h1>
+            </div>
+        </div>
+    </section>
+
+    <img class="tamsoma" src="./images/tamsoma-jyotigrmeya.png" />
+
+    <!-- about us section start -->
+    <section class="about" id="about">
+        <h1 class="heading"> About Us </h1>
+        <p class="about-paragraph"> Jambudweep Shodh Kendra is focused on Public Policy, Elections, Analytics and
+            Communications. We have worked on multiple Public Policy objectives and on multiple Lok Sabha and Vidhan
+            Sabha elections. <br><br>
+            Data is in our DNA and is at the core of our everyday activity whether it is Public Policy, Election or
+            Communication.
+        </p>
+    </section>
+
+    <!-- our services section start -->
+    <section class="ourServices" id="ourServices">
+        <h1 class="heading"> Our Services </h1>
+        <div class="services-content">
+            <div class="circle-content">
+                <a href="./elections/elections.html">
+                    <img src="./images/elections.png" />
+                </a>
+                <h2 style="color: #fe5c24;">ELECTIONS</h2>
+            </div>
+            <div class="circle-content">
+                <a href="./publicPolicy/publicPolicy.html">
+                    <img src="./images/public-policy.png" />
+                </a>
+                <h2 style="color: #fe5c24;"> PUBLIC POLICY </h2>
+            </div>
+            <div class="circle-content">
+                <a href="./analytics/analytics.html">
+                    <img src="./images/analytics.png" />
+                </a>
+                <h2 style="color: #fe5c24;"> ANALYTICS </h2>
+            </div>
+            <div class="circle-content">
+                <a href="./communication/communication.html">
+                    <img src="./images/communication.png" />
+                </a>
+                <h2 style="color: #fe5c24;"> COMMUNICATION </h2>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- linear gradient -->
+    <script>
+        window.addEventListener('scroll', function () {
+            const scrollPercentage = (document.documentElement.scrollTop / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            const gradientColor = `linear-gradient(180deg, #FEF9FF ${scrollPercentage}%, #FFB36D 100%)`;
+            document.querySelector('.page').style.background = gradientColor;
+        });
+    </script>
+
+    <!-- footer section start -->
+    <div class="footer" id="contact">
+        <div class="question-box">
+            <div>
+                <p class="question">DO YOU HAVE A QUESTION?</p>
+                <button class="submit">CONTACT US</button>
+            </div>
+        </div>
+        <div class="footer-left">
+            <img src="./images/footer-logo.png" class="footer-logo" />
+        </div>
+        <div class="footer-center">
+            <p style="font-size: larger; font-family: Outfit;">Follow For More:</p>
+            <a href="https://www.linkedin.com/company/jambudwipa/"><img src="./images/linkedin.png"
+                    style="width: 30px; height: 30px;" class="icon1" /></a>
+            <a href="https://www.facebook.com/JambudweepShodhKendra/"><img src="./images/facebook.png"
+                    style="width: 30px; height: 30px; padding-left: 0.5rem;" class="icon1" /></a>
+            <a href="https://twitter.com/JambudweepShodh"><img src="./images/twitter.png"
+                    style="width: 30px; height: 30px; padding-left: 0.5rem;" class="icon2" /></a>
+        </div>
+        <div class="footer-right">
+            <p style="font-size: larger; font-family: Outfit;">Contact Us:</p>
+            <div style="width: 75%;">
+                <a href="mailto:contact@jambudwipa.com" style="color: black;">
+                    <img src="./images/gmail.png" style="width: 30px; height: 30px;" class="icons" />
+                    <p class="info" style="text-decoration:underline;">contact@jambudwipa.com</p>
+                </a>
+            </div>
+            <div style="width: 75%;">
+                <a href="https://wa.me/919625766535" style="color: black;">
+                    <img src="./images/whatsapp.png" style="width: 30px; height: 30px;" class="icons" />
+                    <p class="info">+919625766535</p>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

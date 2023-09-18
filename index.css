@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css?family=Outfit");
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  margin: 0;
+}
+
+section {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container {
+  margin-left: 43rem;
+  position: fixed;
+  z-index: 3;
+}
+
+.logo {
+  width: 70%;
+  height: 70%;
+}
+
+/* navbar section start */
+.navbar {
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+  height: 10%;
+  position: fixed;
+  top: 0;
+  background: #fef9ff;
+  z-index: 2;
+  box-shadow: 0px 4px 8px 0px #000000cc;
+}
+
+.navbar-left {
+  width: 22%;
+  float: left;
+  color: #fe5c24;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar-right {
+  width: 22%;
+  float: right;
+  color: #fe5c24;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar-name {
+  font-family: Outfit;
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 1.5rem;
+}
+
+.navbar-name:hover {
+  transform: scale(1.1);
+  color: black;
+}
+
+/* home section start */
+.slider {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: fade 25s infinite;
+  background-size: cover;
+  background-position: center;
+}
+
+.slide:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.slide:nth-child(2) {
+  animation-delay: 5s;
+}
+
+.slide:nth-child(3) {
+  animation-delay: 10s;
+}
+
+.slide:nth-child(4) {
+  animation-delay: 15s;
+}
+
+.slide:nth-child(5) {
+  animation-delay: 20s;
+}
+
+@keyframes fade {
+  0%,
+  20% {
+    opacity: 0;
+  }
+  25%,
+  45% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.slide-text {
+  text-align: center;
+  color: white;
+  font-size: 6rem;
+  font-weight: 1500;
+  font-family: Outfit;
+  margin: 0;
+  position: absolute;
+  top: 35%;
+  left: 22%;
+  right: 22%;
+  bottom: 35%;
+}
+
+.tamsoma {
+  margin-top: 7rem;
+  height: 10%;
+  width: 25%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* about us section start */
+.about {
+  margin-top: 2rem;
+}
+
+.heading {
+  text-transform: uppercase;
+  color: #fe5c24;
+  font-weight: 900;
+  font-size: 50px;
+  line-height: 120px;
+  margin-top: 9rem;
+  margin-bottom: 0;
+}
+
+.about-paragraph {
+  text-align: center;
+  width: 80%;
+  font-weight: 300;
+  font-size: 35px;
+  font-family: Outfit;
+  line-height: 44.1px;
+  color: #191d34;
+}
+
+/* our services section start */
+.ourServices {
+  margin-top: 2rem;
+}
+
+.services-content {
+  margin-top: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 55%;
+}
+
+.circle-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 1rem;
+}
+
+.circle-content:hover {
+  cursor: pointer;
+}
+
+img {
+  width: 250px;
+  height: 250px;
+}
+
+/* footer section start */
+.footer {
+  margin-top: 20%;
+  background-color: #c7ede6;
+  padding: 5%;
+  height: 20rem;
+  position: relative;
+}
+
+.question-box {
+  margin: 15%;
+  margin-top: -8%;
+  border: 2px solid #fe5c24;
+  background: #fe5c24;
+  color: white;
+  border-radius: 20px;
+  width: 60%;
+  height: 6rem;
+  position: absolute;
+  z-index: 2;
+  box-shadow: 0 4px 6px #000011;
+}
+
+.question {
+  float: left;
+  padding-left: 7%;
+  padding-top: 1%;
+  width: 60%;
+  font-size: 25px;
+  font-family: outfit;
+}
+
+.submit {
+  float: right;
+  margin-right: 15%;
+  margin-top: 1.7%;
+  width: 17%;
+  font-size: 20px;
+  font-family: outfit;
+  text-align: center;
+  border: 2px solid #191d34;
+  height: 4rem;
+  border-radius: 40px;
+  background-color: #191d34;
+  color: aliceblue;
+}
+
+.footer-left {
+  width: 30%;
+  text-align: center;
+  float: left;
+  margin-top: 4rem;
+}
+
+.footer-center {
+  width: 30%;
+  text-align: center;
+  float: left;
+  margin-top: 4rem;
+}
+
+.footer-right {
+  float: left;
+  width: 30%;
+  padding-left: 5%;
+  margin-top: 4rem;
+}
+
+.footer-logo {
+  width: 219.81px;
+  height: 216.82px;
+  top: 184px;
+  left: 153px;
+  border-radius: 293.99px;
+}
+
+.icon1 {
+  width: 10%;
+  padding-right: 1%;
+  height: auto;
+}
+
+.icon2 {
+  width: 10%;
+  height: auto;
+}
+
+.icons {
+  width: 15%;
+  float: left;
+  height: auto;
+}
+
+.info {
+  margin-top: 0rem;
+  float: left;
+  font-size: large;
+  padding: 0% 8%;
+  font-family: Outfit;
+}
