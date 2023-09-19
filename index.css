@@ -18,14 +18,15 @@ section {
 }
 
 .logo-container {
-  margin-left: 43rem;
-  position: fixed;
-  z-index: 3;
+  display: flex;
+  justify-content: center;
 }
 
 .logo {
-  width: 70%;
-  height: 70%;
+  width: 11%;
+  height: 23%;
+  z-index: 3;
+  position: fixed;
 }
 
 /* navbar section start */
@@ -41,24 +42,19 @@ section {
   box-shadow: 0px 4px 8px 0px #000000cc;
 }
 
-.navbar-left {
-  width: 22%;
-  float: left;
-  color: #fe5c24;
+.navbar-left,
+.navbar-right {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  justify-content: space-evenly;
   text-align: center;
-  text-decoration: none;
-  font-size: 18px;
-  transition: all 0.2s ease-in-out;
+  float: left;
 }
 
-.navbar-right {
-  width: 22%;
-  float: right;
-  color: #fe5c24;
-  text-align: center;
+.navbar-link {
   text-decoration: none;
-  font-size: 18px;
-  transition: all 0.2s ease-in-out;
+  color: #fe5c24;
 }
 
 .navbar-name {
@@ -87,7 +83,7 @@ section {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 90%;
   opacity: 0;
   animation: fade 25s infinite;
   background-size: cover;
@@ -209,15 +205,15 @@ img {
 /* footer section start */
 .footer {
   margin-top: 20%;
+  display: flex;
+  justify-content: center;
   background-color: #c7ede6;
-  padding: 5%;
-  height: 20rem;
-  position: relative;
+  height: 30rem;
+  font-family: Outfit;
 }
 
 .question-box {
-  margin: 15%;
-  margin-top: -8%;
+  margin-top: -3.5%;
   border: 2px solid #fe5c24;
   background: #fe5c24;
   color: white;
@@ -235,7 +231,6 @@ img {
   padding-top: 1%;
   width: 60%;
   font-size: 25px;
-  font-family: outfit;
 }
 
 .submit {
@@ -244,7 +239,6 @@ img {
   margin-top: 1.7%;
   width: 17%;
   font-size: 20px;
-  font-family: outfit;
   text-align: center;
   border: 2px solid #191d34;
   height: 4rem;
@@ -253,56 +247,47 @@ img {
   color: aliceblue;
 }
 
-.footer-left {
-  width: 30%;
-  text-align: center;
-  float: left;
-  margin-top: 4rem;
+.footer-bottom {
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 90%;
 }
 
+.footer-left,
 .footer-center {
   width: 30%;
   text-align: center;
-  float: left;
-  margin-top: 4rem;
 }
 
 .footer-right {
-  float: left;
   width: 30%;
-  padding-left: 5%;
-  margin-top: 4rem;
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-logo {
   width: 219.81px;
   height: 216.82px;
-  top: 184px;
-  left: 153px;
-  border-radius: 293.99px;
 }
 
-.icon1 {
-  width: 10%;
-  padding-right: 1%;
-  height: auto;
+.footer-heading {
+  font-size: larger;
 }
 
-.icon2 {
-  width: 10%;
-  height: auto;
+.footer-icon {
+  width: 30px;
+  height: 30px;
 }
 
-.icons {
-  width: 15%;
-  float: left;
-  height: auto;
-}
-
-.info {
-  margin-top: 0rem;
-  float: left;
-  font-size: large;
-  padding: 0% 8%;
-  font-family: Outfit;
+.footer-right-content {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 30%;
+  text-decoration: none;
+  color: black;
 }
