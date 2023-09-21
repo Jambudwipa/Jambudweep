@@ -83,7 +83,7 @@ section {
   top: 0;
   left: 0;
   width: 100%;
-  height: 90%;
+  height: 100%;
   opacity: 0;
   animation: fade 25s infinite;
   background-size: cover;
@@ -128,8 +128,8 @@ section {
 .slide-text {
   text-align: center;
   color: white;
-  font-size: 6rem;
-  font-weight: 1500;
+  font-size: 6.25rem;
+  font-weight: 900;
   font-family: Outfit;
   margin: 0;
   position: absolute;
@@ -140,7 +140,7 @@ section {
 }
 
 .tamsoma {
-  margin-top: 7rem;
+  margin-top: 5rem;
   height: 10%;
   width: 25%;
   display: block;
@@ -149,62 +149,56 @@ section {
 }
 
 /* about us section start */
-.about {
-  margin-top: 2rem;
-}
-
 .heading {
   text-transform: uppercase;
   color: #fe5c24;
   font-weight: 900;
-  font-size: 50px;
+  font-size: 3rem;
   line-height: 120px;
   margin-top: 9rem;
   margin-bottom: 0;
+  font-family: Outfit;
 }
 
 .about-paragraph {
   text-align: center;
   width: 80%;
   font-weight: 300;
-  font-size: 35px;
+  font-size: 2rem;
   font-family: Outfit;
   line-height: 44.1px;
   color: #191d34;
 }
 
 /* our services section start */
-.ourServices {
-  margin-top: 2rem;
-}
-
 .services-content {
   margin-top: 5rem;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-between;
-  width: 55%;
+  width: 60%;
 }
 
 .circle-content {
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin: 1rem;
+  font-family: Outfit;
+  color: #fe5c24;
 }
 
 .circle-content:hover {
   cursor: pointer;
 }
 
-img {
-  width: 250px;
-  height: 250px;
+.circle-content img {
+  width: 15.625rem;
+  height: 15.625rem;
 }
 
 /* footer section start */
 .footer {
-  margin-top: 20%;
+  margin-top: 15%;
   display: flex;
   justify-content: center;
   background-color: #c7ede6;
@@ -218,8 +212,8 @@ img {
   background: #fe5c24;
   color: white;
   border-radius: 20px;
-  width: 60%;
-  height: 6rem;
+  width: 50%;
+  height: 5rem;
   position: absolute;
   z-index: 2;
   box-shadow: 0 4px 6px #000011;
@@ -227,24 +221,28 @@ img {
 
 .question {
   float: left;
-  padding-left: 7%;
   padding-top: 1%;
+  padding-left: 7%;
   width: 60%;
-  font-size: 25px;
+  font-size: 1.25rem;
 }
 
 .submit {
   float: right;
-  margin-right: 15%;
-  margin-top: 1.7%;
-  width: 17%;
-  font-size: 20px;
+  margin-right: 7%;
+  margin-top: 1.8%;
+  width: 10rem;
+  font-size: 16px;
   text-align: center;
   border: 2px solid #191d34;
-  height: 4rem;
+  height: 3.5rem;
   border-radius: 40px;
   background-color: #191d34;
   color: aliceblue;
+}
+
+.submit:hover {
+  cursor: pointer;
 }
 
 .footer-bottom {
@@ -274,6 +272,11 @@ img {
 }
 
 .footer-heading {
+  font-size: larger;
+  margin-bottom: 2rem;
+}
+
+.footer-heading1 {
   font-size: larger;
 }
 
