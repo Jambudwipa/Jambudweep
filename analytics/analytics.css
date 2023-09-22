@@ -6,6 +6,7 @@
 
 body {
   margin: 0;
+  font-family: Outfit;
 }
 
 section {
@@ -23,8 +24,8 @@ section {
 }
 
 .logo {
-  width: 11%;
-  height: 23%;
+  width: 10.5rem;
+  height: 10.5rem;
   z-index: 3;
   position: fixed;
 }
@@ -58,7 +59,6 @@ section {
 }
 
 .navbar-name {
-  font-family: Outfit;
   font-weight: 500;
   font-size: 18px;
   margin-top: 1.5rem;
@@ -87,7 +87,6 @@ section {
   color: #fef9ff;
   font-size: 100px;
   font-weight: 900;
-  font-family: Outfit;
   position: absolute;
   top: 35%;
   left: 50%;
@@ -95,10 +94,10 @@ section {
   line-height: 95px;
 }
 
+/* circle content starts */
 .analytics-para {
   margin-top: 2rem;
   width: 80%;
-  font-family: Outfit;
   font-weight: 400;
   font-size: 1.125rem;
   line-height: normal;
@@ -145,7 +144,6 @@ section {
 }
 
 .circle-title {
-  font-family: Outfit;
   font-weight: 400;
   font-size: 16px;
   line-height: 20.16px;
@@ -158,11 +156,10 @@ section {
   justify-content: center;
   background-color: #c7ede6;
   height: 30rem;
-  font-family: Outfit;
 }
 
 .question-box {
-  margin-top: -3.5%;
+  margin-top: -3%;
   border: 2px solid #fe5c24;
   background: #fe5c24;
   color: white;
