@@ -50,53 +50,119 @@
         </div>
     </section>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const show1 = document.getElementById('show1');
+            const show2 = document.getElementById('show2');
+
+            show2.addEventListener('mouseover', function () {
+                show1.style.display = 'none';
+            });
+
+            show2.addEventListener('mouseout', function () {
+                show1.style.display = 'block';
+            });
+        });
+    </script>
+
     <!-- circle section start -->
-    <!-- <section>
-        <div class="element">
-            <div class="show">
+    <section>
+        <div class="element" style="margin-top: 7rem; width: 80%;">
+            <div class="show1" id="show1">
                 <div class="circle" style="float: left; margin-right: 5%;">
-                    <img class="election-icon"
-                        src="https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg">
-                    <p style="margin-top: 14rem;"> Pre Campaign <br /> Study </p>
+                    <img class="circle-icon" src="../icons/precampaign_study.png">
+                    <p style="margin-top: 13rem;"> Pre Campaign <br /> Study </p>
                 </div>
             </div>
             <div class="hide">
                 <div class="small-circle" style="float: left; margin-right: 5%;">
-                    <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg"
-                        class="election-icon">
-                    <p style="margin-top: 10rem;"> Jambudweep Shodh Kendra</p>
+                    <img src="../icons/election_analysis.png" class="circle-icon">
+                    <p style="margin-top: 8rem;"> Election <br /> Analysis</p>
                 </div>
                 <div class="small-circle" style="float: left; margin-right: 5%;">
-                    <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg"
-                        class="election-icon">
+                    <img src="../icons/demographic_analysis.png" class="circle-icon">
+                    <p style="margin-top: 8rem;"> Demographic <br /> Analysis</p>
                 </div>
                 <div class="small-circle" style="float: left; margin-right: 5%;">
-                    <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg"
-                        class="election-icon">
+                    <img src="../icons/opinion_poll.png" class="circle-icon">
+                    <p style="margin-top: 8rem;"> Opinion <br /> Poll</p>
                 </div>
             </div>
-            <div class="show">
+            <div class="show2" id="show2">
                 <div class="circle" style="float: right; margin-left: 5%;">
-                    <img src="https://images.pexels.com/photos/1353126/pexels-photo-1353126.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                        class="election-icon">
+                    <img src="../icons/data_analysis.png" class="circle-icon">
+                    <p style="margin-top: 13rem;"> Campaign Strategy <br /> and Execution</p>
                 </div>
             </div>
             <div class="hide">
                 <div class="small-circle" style="float: right; margin-left: 5%;">
-                    <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg"
-                        class="election-icon">
+                    <img src="../icons/coalition_building.png" class="circle-icon">
+                    <p style="margin-top: 8rem;"> Coalition <br /> Building</p>
                 </div>
                 <div class="small-circle" style="float: right; margin-left: 5%;">
-                    <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg"
-                        class="election-icon">
+                    <img src="../icons/tracking.png" class="circle-icon">
+                    <p style="margin-top: 8rem;"> Tracking</p>
                 </div>
                 <div class="small-circle" style="float: right; margin-left: 5%;">
-                    <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg"
-                        class="election-icon">
+                    <img src="../icons/polling.png" class="circle-icon">
+                    <p style="margin-top: 8rem;"> Polling</p>
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
+    <div class="circle-center">
+        <div class="element" style="width: 100%;">
+            <div class="show3">
+                <div class="circle" style="float: left; left: 44%;">
+                    <img src="../icons/war_room.png" class="circle-icon">
+                    <p style="margin-top: 13rem;"> War Room </p>
+                </div>
+            </div>
+            <div class="hide">
+                <div class="small-circle" style="float: left; margin-right: 10%;">
+                    <img src="../icons/field_operation_and_ground_game.png" class="circle-icon">
+                    <p style="margin-top: 8rem;"> Field Operation <br /> and Ground <br /> Game</p>
+                </div>
+                <div class="small-circle" style="float: left; margin-right: 10%;">
+                    <img src="../icons/campaign_evaluation.png" class="circle-icon">
+                    <p style="margin-top: 8rem;"> Campaign <br /> Evaluation</p>
+                </div>
+
+                <div class="small-circle" style="float: right; margin-right: 13%;">
+                    <img src="../icons/post_election_analysis.png" class="circle-icon">
+                    <p style="margin-top: 8rem;"> Post-Election <br /> Analysis</p>
+                </div>
+                <div class="small-circle" style="float: right; margin-right: 10%;">
+                    <img src="../icons/gotv.png" class="circle-icon">
+                    <p style="margin-top: 8rem;"> GOVT(Get-<br />Out-The-Votes)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="circle-center" style="margin-bottom: 12rem;">
+        <div class="element" style="width: 100%;">
+            <div class="show3">
+                <div class="circle" style="float: left; left: 44%;">
+                    <img src="../icons/networking.png" class="circle-icon">
+                    <p style="margin-top: 13rem;"> Communication </p>
+                </div>
+            </div>
+            <div class="hide">
+                <div class="small-circle" style="float: left; margin-right: 9%;">
+                    <img src="../icons/narrative_analysis.png" class="circle-icon">
+                    <p style="margin-top: 8rem;"> Narrative <br /> Strategy</p>
+                </div>
+                <div class="small-circle" style="float: left; margin-right: 5%;">
+                    <img src="../icons/digital_and_social-media_strategy.png" class="circle-icon">
+                    <p style="margin-top: 8rem;"> Digital and <br /> Social Media <br /> Strategy</p>
+                </div>
+                <div class="small-circle" style="float: right; margin-right: 28%;">
+                    <img src="../icons/media-relation-and-publicity.png" class="circle-icon">
+                    <p style="margin-top: 8rem;"> Media Relations <br /> and Publicity</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- footer section start -->
     <div class="footer" id="contact">
@@ -110,20 +176,21 @@
             </div>
             <div class="footer-center">
                 <p class="footer-heading">Follow For More:</p>
-                <a href="https://www.linkedin.com/company/jambudwipa/"><img src="../images/linkedin.png"
+                <a href="https://www.linkedin.com/company/jambudwipa/" target="_blank"><img src="../images/linkedin.png"
                         class="footer-icon" /></a>
-                <a href="https://www.facebook.com/JambudweepShodhKendra/"><img src="../images/facebook.png"
-                        class="footer-icon" style="padding-left: 1.4rem; padding-right: 1.4rem;" /></a>
-                <a href="https://twitter.com/JambudweepShodh"><img src="../images/twitter.png"
+                <a href="https://www.facebook.com/JambudweepShodhKendra/" target="_blank"><img
+                        src="../images/facebook.png" class="footer-icon"
+                        style="padding-left: 1.4rem; padding-right: 1.4rem;" /></a>
+                <a href="https://twitter.com/JambudweepShodh" target="_blank"><img src="../images/twitter.png"
                         class="footer-icon" /></a>
             </div>
             <div class="footer-right">
                 <p class="footer-heading1">Contact Us:</p>
-                <a href="mailto:contact@jambudwipa.com" class="footer-right-content">
+                <a href="mailto:contact@jambudwipa.com" class="footer-right-content" target="_blank">
                     <img src="../images/gmail.png" class="footer-icon" />
                     <p style="text-decoration:underline; padding-left: 12px;">contact@jambudwipa.com</p>
                 </a>
-                <a href="https://wa.me/919625766535" class="footer-right-content">
+                <a href="https://wa.me/919625766535" class="footer-right-content" target="_blank">
                     <img src="../images/whatsapp.png" class="footer-icon" />
                     <p style="padding-left: 8px;">+919625766535</p>
                 </a>

@@ -6,6 +6,7 @@
 
 body {
   margin: 0;
+  font-family: Outfit;
 }
 
 section {
@@ -23,8 +24,8 @@ section {
 }
 
 .logo {
-  width: 11%;
-  height: 23%;
+  width: 10.5rem;
+  height: 10.5rem;
   z-index: 3;
   position: fixed;
 }
@@ -58,7 +59,6 @@ section {
 }
 
 .navbar-name {
-  font-family: Outfit;
   font-weight: 500;
   font-size: 18px;
   margin-top: 1.5rem;
@@ -87,7 +87,6 @@ section {
   color: #fef9ff;
   font-size: 100px;
   font-weight: 900;
-  font-family: Outfit;
   position: absolute;
   top: 35%;
   left: 50%;
@@ -98,7 +97,6 @@ section {
 .elections-para {
   margin-top: 2rem;
   width: 80%;
-  font-family: Outfit;
   font-weight: 500;
   font-size: 20px;
   line-height: 22.68px;
@@ -106,16 +104,13 @@ section {
 
 /* circle section start */
 .element {
-  margin-top: 7rem;
-  width: 80%;
-  height: 15rem;
   align-items: center;
   text-align: center;
 }
 
 .circle {
-  height: 205px;
-  width: 205px;
+  width: 11.66rem;
+  height: 11.66rem;
   border-radius: 100%;
   position: relative;
   background: #fdae304f;
@@ -124,13 +119,15 @@ section {
 }
 
 .circle:hover {
-  background: #FF9C41;
+  background: #ff9c41;
   box-shadow: none;
 }
 
 .small-circle {
-  height: 150px;
-  width: 150px;
+  width: 7.06rem;
+  height: 7.01rem;
+  /* height: 150px; */
+  /* width: 150px; */
   border-radius: 100%;
   position: relative;
   background: #fdae304f;
@@ -138,7 +135,7 @@ section {
   box-shadow: 0px 4px 4px 0px #00000040;
 }
 
-.election-icon {
+.circle-icon {
   width: 45%;
   height: 45%;
   top: 0;
@@ -153,8 +150,27 @@ section {
 .hide {
   display: none;
 }
-.show:hover + .hide {
+
+.show1:hover ~ .show2 {
+  display: none;
+}
+
+.show1:hover + .hide {
   display: block;
+}
+
+.show2:hover + .hide {
+  display: block;
+}
+
+.show3:hover + .hide {
+  display: block;
+}
+
+.circle-center {
+  margin-top: 8rem;
+  width: 100%;
+  height: 15rem;
 }
 
 /* footer section start */
@@ -164,11 +180,10 @@ section {
   justify-content: center;
   background-color: #c7ede6;
   height: 30rem;
-  font-family: Outfit;
 }
 
 .question-box {
-  margin-top: -3.5%;
+  margin-top: -3%;
   border: 2px solid #fe5c24;
   background: #fe5c24;
   color: white;

@@ -6,6 +6,7 @@
 
 body {
   margin: 0;
+  font-family: Outfit;
 }
 
 section {
@@ -23,8 +24,8 @@ section {
 }
 
 .logo {
-  width: 11%;
-  height: 23%;
+  width: 10.5rem;
+  height: 10.5rem;
   z-index: 3;
   position: fixed;
 }
@@ -58,7 +59,6 @@ section {
 }
 
 .navbar-name {
-  font-family: Outfit;
   font-weight: 500;
   font-size: 18px;
   margin-top: 1.5rem;
@@ -130,7 +130,6 @@ section {
   color: white;
   font-size: 6.25rem;
   font-weight: 900;
-  font-family: Outfit;
   margin: 0;
   position: absolute;
   top: 35%;
@@ -157,7 +156,6 @@ section {
   line-height: 120px;
   margin-top: 9rem;
   margin-bottom: 0;
-  font-family: Outfit;
 }
 
 .about-paragraph {
@@ -165,7 +163,6 @@ section {
   width: 80%;
   font-weight: 300;
   font-size: 2rem;
-  font-family: Outfit;
   line-height: 44.1px;
   color: #191d34;
 }
@@ -183,7 +180,6 @@ section {
   display: flex;
   flex-direction: column;
   text-align: center;
-  font-family: Outfit;
   color: #fe5c24;
 }
 
@@ -203,11 +199,10 @@ section {
   justify-content: center;
   background-color: #c7ede6;
   height: 30rem;
-  font-family: Outfit;
 }
 
 .question-box {
-  margin-top: -3.5%;
+  margin-top: -3%;
   border: 2px solid #fe5c24;
   background: #fe5c24;
   color: white;
