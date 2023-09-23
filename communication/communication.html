@@ -50,12 +50,105 @@
         </div>
     </section>
 
+    <!-- circle section start -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const elements = document.querySelectorAll('.show1, .show2, .show3');
+
+            elements.forEach((element) => {
+                element.addEventListener('mouseover', function () {
+                    elements.forEach((otherElement) => {
+                        if (otherElement !== element) {
+                            otherElement.style.display = 'none';
+                        }
+                    });
+                });
+
+                element.addEventListener('mouseout', function () {
+                    elements.forEach((otherElement) => {
+                        if (otherElement !== element) {
+                            otherElement.style.display = 'block';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+    <section>
+        <div class="element" style="margin-top: 7rem; width: 80%;">
+            <div class="show1" id="show1">
+                <div class="circle" style="float: left; margin-right: 6%;">
+                    <img class="circle-icon" src="../icons/analytics_and_strategy.png">
+                    <p style="margin-top: 13rem;"> Analytics and <br /> Strategy </p>
+                </div>
+            </div>
+            <div class="hide">
+                <div class="small-circle" style="float: left; margin-right: 6%;">
+                    <img src="../icons/communication_analytics.png" class="circle-icon">
+                    <p style="margin-top: 8rem;"> Communication <br /> Analytics</p>
+                </div>
+                <div class="small-circle" style="float: left; margin-right: 6%;">
+                    <img src="../icons/measurements.png" class="circle-icon">
+                    <p style="margin-top: 8rem;"> Measurement</p>
+                </div>
+                <div class="small-circle" style="float: left; margin-right: 6%;">
+                    <img src="../icons/strategy_development.png" class="circle-icon">
+                    <p style="margin-top: 8rem;"> Strategy <br /> Development</p>
+                </div>
+            </div>
+            <div class="show2" id="show2">
+                <div class="circle" style="float: right; margin-left: 6%;">
+                    <img src="../icons/dissemination.png" class="circle-icon">
+                    <p style="margin-top: 13rem;"> Dissemination</p>
+                </div>
+            </div>
+            <div class="hide">
+                <div class="small-circle" style="float: right; margin-left: 6%;">
+                    <img src="../icons/crisis_communication.png" class="circle-icon">
+                    <p style="margin-top: 8rem;"> Crisis <br /> Communication</p>
+                </div>
+                <div class="small-circle" style="float: right; margin-left: 6%;">
+                    <img src="../icons/Internal_communication.png" class="circle-icon">
+                    <p style="margin-top: 8rem;"> Internal <br />Communication</p>
+                </div>
+                <div class="small-circle" style="float: right; margin-left: 6%;">
+                    <img src="../icons/reputation_managements.png" class="circle-icon">
+                    <p style="margin-top: 8rem;"> Reputation <br /> Management</p>
+                </div>
+                <div class="small-circle" style="float: right; margin-left: 6%;">
+                    <img src="../icons/media_relation.png" class="circle-icon">
+                    <p style="margin-top: 8rem;"> Media <br /> Relation/p>
+                </div>
+            </div>
+            <div style="width: 100%;">
+                <div class="element" style="width: 100%;">
+                    <div class="show3">
+                        <div class="circle" style="float: left; left: 21.2%;">
+                            <img src="../icons/narrative.png" class="circle-icon">
+                            <p style="margin-top: 13rem;"> Narrative</p>
+                        </div>
+                    </div>
+                    <div class="hide">
+                        <div class="small-circle" style="float: left; margin-right: 4.5%;">
+                            <img src="../icons/messaging_nd_storytelling.png" class="circle-icon">
+                            <p style="margin-top: 8rem;"> Messaging and<br /> Story Telling</p>
+                        </div>
+                        <div class="small-circle" style="float: left;">
+                            <img src="../icons/content_creation.png" class="circle-icon">
+                            <p style="margin-top: 8rem;"> Content <br /> Creation</p>
+                        </div>
+                        <div class="small-circle" style="float: right; margin-right: 28.2%;">
+                            <img src="../icons/speech_writing_and_presentation.png" class="circle-icon">
+                            <p style="margin-top: 8rem;"> Speech Writing <br /> and <br /> Presentation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- footer section start -->
     <div class="footer" id="contact">
-        <div class="question-box">
-            <p class="question">DO YOU HAVE A QUESTION?</p>
-            <button class="submit">CONTACT US</button>
-        </div>
         <div class="footer-bottom">
             <div class="footer-left">
                 <img src="../images/footer-logo.png" class="footer-logo" />
@@ -64,8 +157,9 @@
                 <p class="footer-heading">Follow For More:</p>
                 <a href="https://www.linkedin.com/company/jambudwipa/" target="_blank"><img src="../images/linkedin.png"
                         class="footer-icon" /></a>
-                <a href="https://www.facebook.com/JambudweepShodhKendra/" target="_blank"><img src="../images/facebook.png"
-                        class="footer-icon" style="padding-left: 1.4rem; padding-right: 1.4rem;" /></a>
+                <a href="https://www.facebook.com/JambudweepShodhKendra/" target="_blank"><img
+                        src="../images/facebook.png" class="footer-icon"
+                        style="padding-left: 1.4rem; padding-right: 1.4rem;" /></a>
                 <a href="https://twitter.com/JambudweepShodh" target="_blank"><img src="../images/twitter.png"
                         class="footer-icon" /></a>
             </div>

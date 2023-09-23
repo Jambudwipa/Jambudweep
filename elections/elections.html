@@ -50,60 +50,68 @@
         </div>
     </section>
 
+    <!-- circle section start -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const show1 = document.getElementById('show1');
-            const show2 = document.getElementById('show2');
+            const elements = document.querySelectorAll('.show1, .show2');
 
-            show2.addEventListener('mouseover', function () {
-                show1.style.display = 'none';
-            });
+            elements.forEach((element) => {
+                element.addEventListener('mouseover', function () {
+                    elements.forEach((otherElement) => {
+                        if (otherElement !== element) {
+                            otherElement.style.display = 'none';
+                        }
+                    });
+                });
 
-            show2.addEventListener('mouseout', function () {
-                show1.style.display = 'block';
+                element.addEventListener('mouseout', function () {
+                    elements.forEach((otherElement) => {
+                        if (otherElement !== element) {
+                            otherElement.style.display = 'block';
+                        }
+                    });
+                });
             });
         });
     </script>
-
-    <!-- circle section start -->
     <section>
         <div class="element" style="margin-top: 7rem; width: 80%;">
             <div class="show1" id="show1">
-                <div class="circle" style="float: left; margin-right: 5%;">
+                <div class="circle" style="float: left; margin-right: 6%;">
                     <img class="circle-icon" src="../icons/precampaign_study.png">
                     <p style="margin-top: 13rem;"> Pre Campaign <br /> Study </p>
                 </div>
             </div>
             <div class="hide">
-                <div class="small-circle" style="float: left; margin-right: 5%;">
+                <div class="small-circle" style="float: left; margin-right: 6%;">
                     <img src="../icons/election_analysis.png" class="circle-icon">
                     <p style="margin-top: 8rem;"> Election <br /> Analysis</p>
                 </div>
-                <div class="small-circle" style="float: left; margin-right: 5%;">
+                <div class="small-circle" style="float: left; margin-right: 6%;">
                     <img src="../icons/demographic_analysis.png" class="circle-icon">
                     <p style="margin-top: 8rem;"> Demographic <br /> Analysis</p>
                 </div>
-                <div class="small-circle" style="float: left; margin-right: 5%;">
+                <div class="small-circle" style="float: left; margin-right: 6%;">
                     <img src="../icons/opinion_poll.png" class="circle-icon">
                     <p style="margin-top: 8rem;"> Opinion <br /> Poll</p>
                 </div>
             </div>
             <div class="show2" id="show2">
-                <div class="circle" style="float: right; margin-left: 5%;">
+                <div class="circle" style="float: right; margin-left: 6%;">
                     <img src="../icons/data_analysis.png" class="circle-icon">
                     <p style="margin-top: 13rem;"> Campaign Strategy <br /> and Execution</p>
                 </div>
             </div>
             <div class="hide">
-                <div class="small-circle" style="float: right; margin-left: 5%;">
+                <div class="small-circle" style="float: right; margin-left: 6%;">
                     <img src="../icons/coalition_building.png" class="circle-icon">
                     <p style="margin-top: 8rem;"> Coalition <br /> Building</p>
                 </div>
-                <div class="small-circle" style="float: right; margin-left: 5%;">
+                <div class="small-circle" style="float: right; margin-left: 6%;">
                     <img src="../icons/tracking.png" class="circle-icon">
                     <p style="margin-top: 8rem;"> Tracking</p>
                 </div>
-                <div class="small-circle" style="float: right; margin-left: 5%;">
+                <div class="small-circle" style="float: right; margin-left: 6%;">
                     <img src="../icons/polling.png" class="circle-icon">
                     <p style="margin-top: 8rem;"> Polling</p>
                 </div>
@@ -119,27 +127,27 @@
                 </div>
             </div>
             <div class="hide">
-                <div class="small-circle" style="float: left; margin-right: 10%;">
+                <div class="small-circle" style="float: left; margin-left: 5%;">
                     <img src="../icons/field_operation_and_ground_game.png" class="circle-icon">
                     <p style="margin-top: 8rem;"> Field Operation <br /> and Ground <br /> Game</p>
                 </div>
-                <div class="small-circle" style="float: left; margin-right: 10%;">
+                <div class="small-circle" style="float: left; margin-left: 6%;">
                     <img src="../icons/campaign_evaluation.png" class="circle-icon">
                     <p style="margin-top: 8rem;"> Campaign <br /> Evaluation</p>
                 </div>
 
-                <div class="small-circle" style="float: right; margin-right: 13%;">
+                <div class="small-circle" style="float: right; margin-right: 18%;">
                     <img src="../icons/post_election_analysis.png" class="circle-icon">
                     <p style="margin-top: 8rem;"> Post-Election <br /> Analysis</p>
                 </div>
-                <div class="small-circle" style="float: right; margin-right: 10%;">
+                <div class="small-circle" style="float: right; margin-right: 5%;">
                     <img src="../icons/gotv.png" class="circle-icon">
                     <p style="margin-top: 8rem;"> GOVT(Get-<br />Out-The-Votes)</p>
                 </div>
             </div>
         </div>
     </div>
-    <div class="circle-center" style="margin-bottom: 12rem;">
+    <div class="circle-center">
         <div class="element" style="width: 100%;">
             <div class="show3">
                 <div class="circle" style="float: left; left: 44%;">
@@ -148,15 +156,15 @@
                 </div>
             </div>
             <div class="hide">
-                <div class="small-circle" style="float: left; margin-right: 9%;">
+                <div class="small-circle" style="float: left; margin-left: 5%;">
                     <img src="../icons/narrative_analysis.png" class="circle-icon">
                     <p style="margin-top: 8rem;"> Narrative <br /> Strategy</p>
                 </div>
-                <div class="small-circle" style="float: left; margin-right: 5%;">
+                <div class="small-circle" style="float: left; margin-left: 6%;">
                     <img src="../icons/digital_and_social-media_strategy.png" class="circle-icon">
                     <p style="margin-top: 8rem;"> Digital and <br /> Social Media <br /> Strategy</p>
                 </div>
-                <div class="small-circle" style="float: right; margin-right: 28%;">
+                <div class="small-circle" style="float: right; margin-right: 30%;">
                     <img src="../icons/media-relation-and-publicity.png" class="circle-icon">
                     <p style="margin-top: 8rem;"> Media Relations <br /> and Publicity</p>
                 </div>
@@ -166,10 +174,6 @@
 
     <!-- footer section start -->
     <div class="footer" id="contact">
-        <div class="question-box">
-            <p class="question">DO YOU HAVE A QUESTION?</p>
-            <button class="submit">CONTACT US</button>
-        </div>
         <div class="footer-bottom">
             <div class="footer-left">
                 <img src="../images/footer-logo.png" class="footer-logo" />
