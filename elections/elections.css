@@ -126,8 +126,6 @@ section {
 .small-circle {
   width: 7.06rem;
   height: 7.01rem;
-  /* height: 150px; */
-  /* width: 150px; */
   border-radius: 100%;
   position: relative;
   background: #fdae304f;
@@ -151,10 +149,6 @@ section {
   display: none;
 }
 
-.show1:hover ~ .show2 {
-  display: none;
-}
-
 .show1:hover + .hide {
   display: block;
 }
@@ -175,54 +169,15 @@ section {
 
 /* footer section start */
 .footer {
-  margin-top: 8%;
+  margin-top: 6%;
   display: flex;
   justify-content: center;
   background-color: #c7ede6;
   height: 30rem;
 }
 
-.question-box {
-  margin-top: -3%;
-  border: 2px solid #fe5c24;
-  background: #fe5c24;
-  color: white;
-  border-radius: 20px;
-  width: 50%;
-  height: 5rem;
-  position: absolute;
-  z-index: 2;
-  box-shadow: 0 4px 6px #000011;
-}
-
-.question {
-  float: left;
-  padding-top: 1%;
-  padding-left: 7%;
-  width: 60%;
-  font-size: 1.25rem;
-}
-
-.submit {
-  float: right;
-  margin-right: 7%;
-  margin-top: 1.8%;
-  width: 10rem;
-  font-size: 16px;
-  text-align: center;
-  border: 2px solid #191d34;
-  height: 3.5rem;
-  border-radius: 40px;
-  background-color: #191d34;
-  color: aliceblue;
-}
-
-.submit:hover {
-  cursor: pointer;
-}
-
 .footer-bottom {
-  margin-top: 10rem;
+  margin-top: 8rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
