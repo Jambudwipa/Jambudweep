@@ -105,29 +105,142 @@
             document.querySelector('.page').style.background = gradientColor;
         });
     </script>
+
     <!-- footer section start -->
     <div class="footer" id="contact">
         <div class="question-box">
             <p class="question">DO YOU HAVE A QUESTION?</p>
-            <button class="submit">CONTACT US</button>
+            <button class="submit" id="Box">CONTACT US</button>
         </div>
+        <div class="box" id="RealBox">
+            <span class="close" id="closeBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M20 20L4 4M20 4L4 20" stroke="#FE5C24" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </span>
+            <div class="contact">
+                <h1 class="contact-form-title">Let's get in contact!</h1>
+                <form class="contact-form" id="contactForm" method="POST" name="contact" data-netlify="true">
+                    <div class="form-group">
+                        <label for="name" style="margin-right: 3.4rem;">Name:*</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" style="margin-right: 3.4rem;">Email:*</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div id="email-error" class="error-message" style="color: red;"></div>
+
+                    <div class="form-group">
+                        <label for="phoneNumber" style="margin-right: 1rem;">Phone No.:*</label>
+                        <input type="number" id="phoneNumber" name="phoneNumber" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" style="margin-right: 1.6rem;">Message:*</label>
+                        <textarea id="message" name="message" rows="4" style="margin-top: 1rem;" required></textarea>
+                    </div>
+
+                    <div id="error" class="error-message"></div>
+
+                    <div class="form-group">
+                        <button class="form-button" type="button" id="submitButton">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <p>Your message has been submitted successfully! We'll be in touch.</p>
+            </div>
+        </div>
+        <script>
+            const RealBox = document.getElementById("RealBox");
+            const popup = document.getElementById("popup");
+            const form = document.getElementById("contactForm");
+            const submitButton = document.getElementById("submitButton");
+            const emailInput = document.getElementById('email');
+            const emailError = document.getElementById('email-error');
+
+            function toggleDialogue() {
+                RealBox.style.display = RealBox.style.display === "block" ? "none" : "block";
+                if (RealBox.style.display === "block") {
+                    form.reset();
+                    clearEmailError();
+                }
+            }
+
+            function clearEmailError() {
+                emailError.textContent = '';
+            }
+
+            function showPopup() {
+                popup.style.display = "block";
+                setTimeout(() => closePopup(), 2000);
+            }
+
+            function closePopup() {
+                popup.style.display = "none";
+            }
+
+            emailInput.addEventListener('blur', function () {
+                const email = emailInput.value;
+                emailError.textContent = validateEmail(email) ? '' : 'Please enter a valid email address.';
+            });
+
+            function validateEmail(email) {
+                const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+                return emailPattern.test(email);
+            }
+
+            submitButton.addEventListener("click", function () {
+                if (isFormValid()) {
+                    showPopup();
+                    toggleDialogue();
+                } else {
+                    alert("Please fill in all required fields correctly.");
+                }
+            });
+
+            function isFormValid() {
+                const name = document.getElementById("name").value;
+                const email = emailInput.value;
+                const message = document.getElementById("message").value;
+                return name.trim() !== "" && validateEmail(email) && message.trim() !== "";
+            }
+
+            window.addEventListener("click", function (event) {
+                if (RealBox.style.display === "block" && !RealBox.contains(event.target) && event.target !== Box) {
+                    toggleDialogue();
+                }
+            });
+
+            const Box = document.getElementById("Box");
+            const closeBtn = document.getElementById("closeBtn");
+
+            Box.addEventListener("click", toggleDialogue);
+            closeBtn.addEventListener("click", toggleDialogue);
+        </script>
         <div class="footer-bottom">
             <div class="footer-left">
                 <img src="./images/footer-logo.png" class="footer-logo" />
             </div>
             <div class="footer-center">
-                <p class="footer-heading">Follow For More:</p>
+                <p class="footer-heading" style="margin-bottom: 2rem;">Follow For More:</p>
                 <a href="https://www.linkedin.com/company/jambudwipa/" target="_blank"><img src="./images/linkedin.png"
                         class="footer-icon" /></a>
-                <a href="https://www.facebook.com/JambudweepShodhKendra/" target="_blank"><img src="./images/facebook.png"
-                        class="footer-icon" style="padding-left: 1.4rem; padding-right: 1.4rem;" /></a>
-                <a href="https://twitter.com/JambudweepShodh" target="_blank"><img src="./images/twitter.png" class="footer-icon" /></a>
+                <a href="https://www.facebook.com/JambudweepShodhKendra/" target="_blank"><img
+                        src="./images/facebook.png" class="footer-icon"
+                        style="padding-left: 1.4rem; padding-right: 1.4rem;" /></a>
+                <a href="https://twitter.com/JambudweepShodh" target="_blank"><img src="./images/twitter.png"
+                        class="footer-icon" /></a>
             </div>
             <div class="footer-right">
-                <p class="footer-heading1">Contact Us:</p>
+                <p class="footer-heading">Contact Us:</p>
                 <a href="mailto:contact@jambudwipa.com" class="footer-right-content" target="_blank">
                     <img src="./images/gmail.png" class="footer-icon" />
-                    <p style="text-decoration:underline; padding-left: 12px;">contact@jambudwipa.com</p>
+                    <p style="text-decoration: underline; padding-left: 12px;">contact@jambudwipa.com</p>
                 </a>
                 <a href="https://wa.me/919625766535" class="footer-right-content" target="_blank">
                     <img src="./images/whatsapp.png" class="footer-icon" />
