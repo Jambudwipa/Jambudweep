@@ -206,3 +206,57 @@ section {
   text-decoration: none;
   color: black;
 }
+
+@media (min-width: 760px) and (max-width: 1096px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  section {
+    margin: 0;
+  }
+
+  .navbar {
+    height: 5.35rem;
+  }
+
+  .navbar-name {
+    margin-top: 2rem;
+  }
+
+  .footer-logo {
+    width: 11.75rem;
+    height: 11.75rem;
+  }
+
+  .bg-image header {
+    background: black;
+    overflow: hidden;
+    height: 44.18rem;
+  }
+
+  .bg-image header img {
+    object-fit: cover;
+    opacity: 0.4;
+    width: 64rem;
+    height: 44.18rem;
+  }
+
+  .heading-text {
+    text-align: center;
+    top: 23%;
+    font-size: 4.75rem;
+  }
+
+  .circle {
+    width: 8.125rem;
+    height: 8.125rem;
+  }
+
+  .analytics-para {
+    width: 85%;
+    font-weight: 400;
+    line-height: normal;
+    font-size: 1rem;
+    font-style: normal;
+  }
+}
