@@ -401,28 +401,173 @@ section {
     display: none;
   }
 
-  .landing-content {
+  .topnav {
+    height: 3rem;
+    overflow: hidden;
+    background: #fef9ff;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+  }
+
+  .navbar-logo {
+    margin-top: 0.2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-left: 0.5rem;
+  }
+
+  .hamb-menu,
+  .topnav-dropdown-close {
+    margin-top: 0.8rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    float: right;
+    margin-right: 0.5rem;
+    cursor: pointer;
+  }
+
+  .topnav-dropdown-content {
+    display: none;
+    position: inherit;
+    background: #fff;
+    width: 100%;
+  }
+
+  .topnav-dropdown-content a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    text-align: right;
+    margin-right: 0.5rem;
+    padding: 8px 8px;
+    font-family: Outfit;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .navbar,
+  .logo-container {
     display: none;
   }
 
-  .responsive {
-    height: 100vh;
-    background-color: rgb(249, 248, 242);
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+  .slider {
+    margin-top: 2.5rem;
+    height: 18.625rem;
   }
 
-  .responsive img {
-    width: 150px;
-    height: 150px;
+  .slide-text {
+    width: 100%;
+    top: 35%;
+    bottom: 40%;
+    left: 0%;
+    right: 0%;
+    font-size: 1.75rem;
   }
 
-  .responsive h3 {
-    font-weight: 300;
-    font-size: medium;
-    font-family: Outfit;
+  .tamsoma {
+    margin-top: 3rem;
+    width: 11rem;
+  }
+
+  .about-paragraph {
+    width: 90%;
+    font-size: 0.875rem;
+    line-height: normal;
+    margin-top: -1.5rem;
+  }
+
+  #about,
+  #ourServices {
+    margin-top: 1rem;
+  }
+
+  .heading {
+    font-size: 1.125rem;
+    margin-top: 0;
+  }
+
+  .services-content {
+    margin-top: 0;
+    width: 70%;
+  }
+
+  .circle-content img {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .circle-content h2 {
+    font-size: 0.75rem;
+  }
+
+  .question-box {
+    width: 21.23rem;
+    height: 2.7rem;
+  }
+
+  .question {
+    font-size: 0.63rem;
+  }
+
+  .question-box button {
+    margin-top: 0.5rem;
+    width: 3.79rem;
+    height: 1.64rem;
+    font-size: 0.398rem;
+  }
+
+  .footer {
+    height: 15rem;
+  }
+
+  .footer-logo {
+    width: 6.875rem;
+    height: 6.937rem;
+  }
+
+  .footer-center {
+    display: none;
+  }
+
+  .footer-bottom {
+    margin-top: 5rem;
+    width: 100%;
+  }
+
+  .footer-left {
+    margin-left: -5rem;
+  }
+
+  .footer-heading {
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  .footer-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .footer-right-content {
+    margin-top: -1rem;
+  }
+
+  .footer-right-content p {
+    font-size: 0.875rem;
+  }
+
+  .footer-center-mobile-view {
+    margin-top: -5%;
+    background-color: #c7ede6;
+    height: 5rem;
+  }
+
+  .footer-center-mobile-view {
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -431,17 +576,12 @@ section {
     display: none;
   }
 
-  .responsive {
+  .topnav {
     display: none;
   }
 
   section {
     margin: 0;
-  }
-
-  .landing-content {
-    width: 100%;
-    font-family: Outfit;
   }
 
   .navbar {
@@ -457,8 +597,9 @@ section {
   }
 
   .slide-text {
+    width: 100%;
+    bottom: 40%;
     top: 40%;
-    text-align: center;
     left: 0%;
     right: 0%;
     font-size: 4.75rem;
@@ -508,10 +649,18 @@ section {
     width: 11.75rem;
     height: 11.75rem;
   }
+
+  .footer-center-mobile-view {
+    display: none;
+  }
 }
 
 @media (min-width: 1100px) {
-  .responsive {
+  .footer-center-mobile-view {
+    display: none;
+  }
+
+  .topnav {
     display: none;
   }
 }

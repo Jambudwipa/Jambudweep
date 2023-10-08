@@ -36,7 +36,7 @@ section {
   position: absolute;
   background: #fef9ff;
   min-width: 160px;
-  margin-left: -2.2rem;
+  margin-left: 2.5rem;
 }
 
 .dropdown-content a {
@@ -88,6 +88,12 @@ section {
   color: #fe5c24;
 }
 
+.navbar-name-two {
+  margin-left: 5rem;
+  text-decoration: none;
+  color: #fe5c24;
+}
+
 .navbar-name,
 .navbar-name-two {
   font-weight: 500;
@@ -118,13 +124,14 @@ section {
 .heading-text {
   text-align: center;
   color: #fef9ff;
-  font-size: 100px;
+  font-size: 6.25rem;
   font-weight: 900;
+  margin: 0;
   position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  line-height: 95px;
+  top: 40%;
+  left: 22%;
+  right: 22%;
+  bottom: 35%;
 }
 
 /* circle content starts */
@@ -240,10 +247,171 @@ section {
   color: black;
 }
 
+@media (min-width: 250px) and (max-width: 760px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  .topnav {
+    height: 3rem;
+    overflow: hidden;
+    background: #fef9ff;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+  }
+
+  .navbar-logo {
+    margin-top: 0.2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-left: 0.5rem;
+  }
+
+  .hamb-menu,
+  .topnav-dropdown-close {
+    margin-top: 0.8rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    float: right;
+    margin-right: 0.5rem;
+    cursor: pointer;
+  }
+
+  .topnav-dropdown-content {
+    display: none;
+    position: inherit;
+    background: #fff;
+    width: 100%;
+  }
+
+  .topnav-dropdown-content a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    text-align: right;
+    margin-right: 0.5rem;
+    padding: 8px 8px;
+    font-family: Outfit;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .navbar,
+  .logo-container {
+    display: none;
+  }
+
+  .bg-image header,
+  .bg-image header img {
+    height: 18.625rem;
+  }
+
+  .heading-text {
+    width: 100%;
+    top: 15%;
+    bottom: 10%;
+    left: 0;
+    right: 0;
+    font-size: 1.75rem;
+  }
+
+  .analytics-content {
+    margin-top: 2rem;
+    width: 100%;
+  }
+
+  .analytics-para {
+    width: 90%;
+    line-height: normal;
+    font-size: 0.875rem;
+  }
+
+  .circle {
+    width: 6.25rem;
+    height: 6.25rem;
+  }
+
+  .circle-heading {
+    margin-top: 7rem;
+    font-size: 0.75rem;
+  }
+
+  .small-circle {
+    width: 4.375rem;
+    height: 4.375rem;
+  }
+
+  .small-circle-heading {
+    margin-top: 5rem;
+    font-size: 0.75rem;
+  }
+
+  .footer {
+    height: 15rem;
+  }
+
+  .footer-logo {
+    width: 6.875rem;
+    height: 6.937rem;
+  }
+
+  .footer-center {
+    display: none;
+  }
+
+  .footer-bottom {
+    margin-top: 5rem;
+    width: 100%;
+  }
+
+  .footer-left {
+    margin-left: -5rem;
+  }
+
+  .footer-heading,
+  .footer-heading1 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .footer-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .footer-right-content {
+    margin-top: -1rem;
+  }
+
+  .footer-right-content p {
+    font-size: 0.875rem;
+  }
+
+  .footer-center-mobile-view {
+    margin-top: -5%;
+    background-color: #c7ede6;
+    height: 5rem;
+  }
+
+  .footer-center-mobile-view {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 @media (min-width: 760px) and (max-width: 1096px) {
   ::-webkit-scrollbar {
     display: none;
   }
+
+  .topnav {
+    display: none;
+  }
+
   section {
     margin: 0;
   }
@@ -266,23 +434,28 @@ section {
     height: 11.75rem;
   }
 
-  .bg-image header {
-    background: black;
-    overflow: hidden;
-    height: 44.18rem;
+  .footer-center-mobile-view {
+    display: none;
   }
 
+  .bg-image header,
   .bg-image header img {
-    object-fit: cover;
-    opacity: 0.4;
-    width: 64rem;
     height: 44.18rem;
   }
 
   .heading-text {
-    text-align: center;
-    top: 23%;
+    width: 100%;
+    bottom: 40%;
+    left: 0%;
+    right: 0%;
+    top: 35%;
     font-size: 4.75rem;
+  }
+
+  .analytics-para {
+    line-height: normal;
+    font-size: 1.125rem;
+    font-style: normal;
   }
 
   .circle {
@@ -290,11 +463,30 @@ section {
     height: 8.125rem;
   }
 
-  .analytics-para {
-    width: 85%;
-    font-weight: 400;
-    line-height: normal;
-    font-size: 1rem;
-    font-style: normal;
+  .circle-heading {
+    margin-top: 9rem;
+  }
+
+  .small-circle {
+    width: 5.125rem;
+    height: 5.125rem;
+  }
+
+  .small-circle-heading {
+    margin-top: 6rem;
+  }
+
+  .circle-center-two {
+    margin-top: 3rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .footer-center-mobile-view {
+    display: none;
+  }
+
+  .topnav {
+    display: none;
   }
 }
