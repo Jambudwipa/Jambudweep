@@ -146,6 +146,8 @@ section {
 .element {
   align-items: center;
   text-align: center;
+  width: 80%;
+  margin-top: 7rem;
 }
 
 .circle {
@@ -311,7 +313,7 @@ section {
   .topnav-dropdown-content {
     display: none;
     position: inherit;
-    background: #fff;
+    background: #fef9ff;
     width: 100%;
   }
 
@@ -350,6 +352,11 @@ section {
     width: 90%;
     line-height: normal;
     font-size: 0.875rem;
+  }
+
+  .element {
+    width: 90%;
+    margin-top: 4rem;
   }
 
   .circle {
@@ -411,7 +418,7 @@ section {
   }
 
   .footer-right-content p {
-    font-size: 0.875rem;
+    font-size: 0.86rem;
   }
 
   .footer-center-mobile-view {

@@ -333,6 +333,7 @@ section {
   font-style: normal;
   font-weight: 400;
   line-height: 3.75rem;
+  top: 0%;
 }
 
 .form-group input {
@@ -343,11 +344,15 @@ section {
   background: #fff;
   margin-bottom: 1rem;
   font-family: Outfit;
+  border-bottom: 1px solid #fe5c24;
+  background-repeat: no-repeat;
+  background-position: 98%;
+  outline: none;
 }
 
-.form-group input:hover,
-.form-group textarea:hover {
-  border-bottom: 1px solid #fe5c24;
+textarea[type="text"]:focus,
+input:focus {
+  border: 1px solid #fe5c24;
 }
 
 .form-group textarea {
@@ -355,15 +360,22 @@ section {
   height: 8.5rem;
   border-radius: 0.3125rem;
   border: none;
+  outline: none;
   background: #fff;
   font-family: Outfit;
+  border-bottom: 1px solid #fe5c24;
+  background-repeat: no-repeat;
+  background-position: top 2% right 1%;
+  vertical-align: top;
 }
 
 .form-button {
+  cursor: pointer;
   color: #fff;
-  width: 29.625rem;
+  width: 32rem;
   height: 2.625rem;
   border-radius: 0.5rem;
+  border-color: #fe5c24;
   background: #fe5c24;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
@@ -432,7 +444,7 @@ section {
   .topnav-dropdown-content {
     display: none;
     position: inherit;
-    background: #fff;
+    background: #fef9ff;
     width: 100%;
   }
 
@@ -504,8 +516,10 @@ section {
   }
 
   .question-box {
+    margin-top: -1.2rem;
     width: 21.23rem;
     height: 2.7rem;
+    box-shadow: 0 1px 2px #000011;
   }
 
   .question {
@@ -556,7 +570,7 @@ section {
   }
 
   .footer-right-content p {
-    font-size: 0.875rem;
+    font-size: 0.86rem;
   }
 
   .footer-center-mobile-view {

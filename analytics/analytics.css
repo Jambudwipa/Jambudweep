@@ -283,7 +283,7 @@ section {
   .topnav-dropdown-content {
     display: none;
     position: inherit;
-    background: #fff;
+    background: #fef9ff;
     width: 100%;
   }
 
@@ -388,7 +388,7 @@ section {
   }
 
   .footer-right-content p {
-    font-size: 0.875rem;
+    font-size: 0.86rem;
   }
 
   .footer-center-mobile-view {
