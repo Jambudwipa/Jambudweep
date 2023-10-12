@@ -89,7 +89,7 @@ section {
 }
 
 .navbar-name-two {
-  margin-left: 5rem;  
+  margin-left: 5rem;
   text-decoration: none;
   color: #fe5c24;
 }
@@ -173,6 +173,44 @@ section {
   background: #fdae304f;
   border-radius: 50%;
   box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.sm-cr-one {
+  float: left;
+  margin-right: 6%;
+}
+
+.sm-cr-two {
+  float: right;
+  margin-left: 6%;
+}
+
+.sm-cr-three,
+.sm-cr-three-one,
+.sm-cr-three-two,
+.sm-cr-three-two-one {
+  float: left;
+  margin-left: 6%;
+}
+
+.sm-cr-three-three {
+  float: right;
+  margin-right: 30%;
+}
+
+.sm-cr-four {
+  float: right;
+  margin-right: 18%;
+}
+
+.sm-cr-five {
+  float: right;
+  margin-right: 5%;
+}
+
+.sm-cr-center {
+  float: left;
+  left: 44%;
 }
 
 .circle-icon {
@@ -364,6 +402,18 @@ section {
     height: 6.25rem;
   }
 
+  .circle-center {
+    width: 100%;
+    margin-top: 10rem;
+    margin-left: -7%;
+  }
+
+  .circle-center-two {
+    width: 100%;
+    margin-top: 6rem;
+    margin-left: -7%;
+  }
+
   .circle-heading {
     margin-top: 7rem;
     font-size: 0.75rem;
@@ -374,12 +424,54 @@ section {
     height: 4.375rem;
   }
 
+  .sm-cr-one {
+    margin-right: 4%;
+  }
+
+  .sm-cr-two {
+    margin-left: 4%;
+  }
+
+  .sm-cr-three {
+    margin-top: 40%;
+    margin-left: -10%;
+  }
+
+  .sm-cr-three-one,
+  .sm-cr-three-two,
+  .sm-cr-three-two-one,
+  .sm-cr-three-three {
+    margin-top: 40%;
+  }
+
+  .sm-cr-three-two-one {
+    margin-left: 1%;
+  }
+
+  .sm-cr-three-two {
+    margin-left: 6%;
+  }
+
+  .sm-cr-three-three {
+    margin-right: 15%;
+  }
+
+  .sm-cr-four {
+    margin-top: 40%;
+    margin-right: 3%;
+  }
+
+  .sm-cr-five {
+    margin-top: 40%;
+  }
+
   .small-circle-heading {
     margin-top: 5rem;
     font-size: 0.75rem;
   }
 
   .footer {
+    margin-top: 17%;
     height: 15rem;
   }
 
