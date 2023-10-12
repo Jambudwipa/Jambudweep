@@ -20,13 +20,43 @@
             const dropdownContent = document.querySelector(".topnav-dropdown-content");
             const logo = document.querySelector(".navbar-logo");
             const dropdownClose = document.querySelector(".topnav-dropdown-close");
+            const servicesSection = document.querySelector(".arrow-svg");
+            const dropdownServicesContent = document.querySelector(".dropdown-services-content");
+            const arrowPath = servicesSection.querySelector("path");
+            const serviceHeading = servicesSection.nextElementSibling;
+
+            serviceHeading.addEventListener("click", function (event) {
+                event.stopPropagation();
+                toggleDropdownServices();
+                if (dropdownServicesContent.style.display === "block") {
+                    arrowPath.style.fill = "#FE5C24";
+                    serviceHeading.style.color = "#FE5C24";
+                } else {
+                    arrowPath.style.fill = "#353535";
+                    serviceHeading.style.color = "black";
+                }
+            });
 
             hambMenu.addEventListener("click", function () {
                 toggleDropdown();
             });
+
             dropdownClose.addEventListener("click", function () {
                 toggleDropdown();
             });
+
+            servicesSection.addEventListener("click", function (event) {
+                event.stopPropagation();
+                toggleDropdownServices();
+                if (dropdownServicesContent.style.display === "block") {
+                    arrowPath.style.fill = "#FE5C24";
+                    serviceHeading.style.color = "#FE5C24";
+                } else {
+                    arrowPath.style.fill = "#353535";
+                    serviceHeading.style.color = "black";
+                }
+            });
+
             function toggleDropdown() {
                 if (dropdownContent.style.display === "block") {
                     dropdownContent.style.display = "none";
@@ -36,8 +66,24 @@
                     dropdownContent.style.display = "block";
                     logo.style.display = "none";
                     hambMenu.style.marginTop = "0";
+                    dropdownServicesContent.style.display = "none";
+                    arrowPath.style.fill = "#353535";
+                    serviceHeading.style.color = "black";
                 }
             }
+
+            function toggleDropdownServices() {
+                if (dropdownServicesContent.style.display === "block") {
+                    dropdownServicesContent.style.display = "none";
+                    arrowPath.style.fill = "#353535";
+                    serviceHeading.style.color = "black";
+                } else {
+                    dropdownServicesContent.style.display = "block";
+                    arrowPath.style.fill = "#FE5C24";
+                    serviceHeading.style.color = "#FE5C24";
+                }
+            }
+
             document.addEventListener("click", function (event) {
                 if (
                     dropdownContent.style.display === "block" &&
@@ -46,19 +92,42 @@
                 ) {
                     toggleDropdown();
                 }
+
+                if (
+                    dropdownServicesContent.style.display === "block" &&
+                    !dropdownServicesContent.contains(event.target) &&
+                    event.target !== servicesSection &&
+                    event.target !== serviceHeading
+                ) {
+                    toggleDropdownServices();
+                }
             });
         });
     </script>
 
     <div class="topnav">
-        <a href="../index.html#home"><img src="../images/logo.png" class="navbar-logo"></img></a>
-        <img class="hamb-menu" src="../images/three-dots.png"></img>
+        <a href="../index.html#home"><img src="../images/logo.png" class="navbar-logo"></a>
+        <img class="hamb-menu" src="../images/three-dots.png">
         <div class="topnav-dropdown-content">
-            <img class="topnav-dropdown-close" src="../images/cross.svg"></img>
-            <a style="margin-top: 3.5rem;" class="topnav-dropdown-item" href="../index.html#home">Home</a>
-            <a class="topnav-dropdown-item" href="../index.html#about">About</a>
-            <a class="topnav-dropdown-item" href="../index.html#service">Services</a>
-            <a style="margin-bottom: 2.5rem;" class="topnav-dropdown-item" href="../index.html#contact">Contact</a>
+            <img class="topnav-dropdown-close" src="../images/cross.svg">
+            <a style="margin-top: 3.5rem;" href="../index.html#home">Home</a>
+            <a href="../index.html#about">About</a>
+            <div style="display: flex; justify-content: end; align-items: center;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    class="arrow-svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M6.99997 9C6.80222 9.00004 6.60892 9.05871 6.44451 9.1686C6.2801 9.27848 6.15196 9.43465 6.07629 9.61735C6.00062 9.80005 5.98082 10.0011 6.01939 10.195C6.05795 10.389 6.15316 10.5671 6.29297 10.707L11.293 15.707C11.4805 15.8945 11.7348 15.9998 12 15.9998C12.2651 15.9998 12.5194 15.8945 12.707 15.707L17.707 10.707C17.8468 10.5671 17.942 10.389 17.9806 10.195C18.0191 10.0011 17.9993 9.80005 17.9236 9.61735C17.848 9.43465 17.7198 9.27848 17.5554 9.1686C17.391 9.05871 17.1977 9.00004 17 9H6.99997Z"
+                        fill="#353535" />
+                </svg>
+                <div style="margin: 0.5rem; margin-right: 1rem;">Services</div>
+            </div>
+            <div class="dropdown-services-content" style="display: none; background: rgba(254, 92, 36, 0.15);">
+                <a href="./elections.html">Election</a>
+                <a href="../publicPolicy/publicPolicy.html">Public Policy</a>
+                <a href="../analytics/analytics.html">Analytics</a>
+                <a href="../communication/communication.html">Communication</a>
+            </div>
+            <a href="../index.html#contact" style="margin-bottom: 2.5rem;">Contact</a>
         </div>
     </div>
 
@@ -137,41 +206,41 @@
     <section>
         <div class="element">
             <div class="show1" id="show1">
-                <div class="circle" style="float: left; margin-right: 6%;">
+                <div class="circle sm-cr-one">
                     <img class="circle-icon" src="../icons/precampaign_study.png">
                     <p class="circle-heading"> Pre Campaign <br /> Study </p>
                 </div>
             </div>
             <div class="hide">
-                <div class="small-circle" style="float: left; margin-right: 6%;">
+                <div class="small-circle sm-cr-one">
                     <img src="../icons/election_analysis.png" class="circle-icon">
                     <p class="small-circle-heading"> Election <br /> Analysis</p>
                 </div>
-                <div class="small-circle" style="float: left; margin-right: 6%;">
+                <div class="small-circle sm-cr-one">
                     <img src="../icons/demographic_analysis.png" class="circle-icon">
                     <p class="small-circle-heading"> Demographic <br /> Analysis</p>
                 </div>
-                <div class="small-circle" style="float: left; margin-right: 6%;">
+                <div class="small-circle sm-cr-one">
                     <img src="../icons/opinion_poll.png" class="circle-icon">
                     <p class="small-circle-heading"> Opinion <br /> Poll</p>
                 </div>
             </div>
             <div class="show2" id="show2">
-                <div class="circle" style="float: right; margin-left: 6%;">
+                <div class="circle sm-cr-two">
                     <img src="../icons/data_analysis.png" class="circle-icon">
                     <p class="circle-heading"> Campaign Strategy <br /> and Execution</p>
                 </div>
             </div>
             <div class="hide">
-                <div class="small-circle" style="float: right; margin-left: 6%;">
+                <div class="small-circle sm-cr-two">
                     <img src="../icons/coalition_building.png" class="circle-icon">
                     <p class="small-circle-heading"> Coalition <br /> Building</p>
                 </div>
-                <div class="small-circle" style="float: right; margin-left: 6%;">
+                <div class="small-circle sm-cr-two">
                     <img src="../icons/tracking.png" class="circle-icon">
                     <p class="small-circle-heading"> Tracking</p>
                 </div>
-                <div class="small-circle" style="float: right; margin-left: 6%;">
+                <div class="small-circle sm-cr-two">
                     <img src="../icons/polling.png" class="circle-icon">
                     <p class="small-circle-heading"> Polling</p>
                 </div>
@@ -181,26 +250,26 @@
     <div class="circle-center">
         <div class="element" style="width: 100%;">
             <div class="show3">
-                <div class="circle" style="float: left; left: 44%;">
+                <div class="circle sm-cr-center">
                     <img src="../icons/war_room.png" class="circle-icon">
                     <p class="circle-heading"> War Room </p>
                 </div>
             </div>
             <div class="hide">
-                <div class="small-circle" style="float: left; margin-left: 5%;">
+                <div class="small-circle sm-cr-three">
                     <img src="../icons/field_operation_and_ground_game.png" class="circle-icon">
                     <p class="small-circle-heading"> Field Operation <br /> and Ground <br /> Game</p>
                 </div>
-                <div class="small-circle" style="float: left; margin-left: 6%;">
+                <div class="small-circle sm-cr-three-one">
                     <img src="../icons/campaign_evaluation.png" class="circle-icon">
                     <p class="small-circle-heading"> Campaign <br /> Evaluation</p>
                 </div>
 
-                <div class="small-circle" style="float: right; margin-right: 18%;">
+                <div class="small-circle sm-cr-four">
                     <img src="../icons/post_election_analysis.png" class="circle-icon">
                     <p class="small-circle-heading"> Post-Election <br /> Analysis</p>
                 </div>
-                <div class="small-circle" style="float: right; margin-right: 5%;">
+                <div class="small-circle sm-cr-five">
                     <img src="../icons/gotv.png" class="circle-icon">
                     <p class="small-circle-heading"> GOVT(Get-<br />Out-The-Votes)</p>
                 </div>
@@ -210,21 +279,21 @@
     <div class="circle-center-two">
         <div class="element" style="width: 100%;">
             <div class="show3">
-                <div class="circle" style="float: left; left: 44%;">
+                <div class="circle sm-cr-center">
                     <img src="../icons/networking.png" class="circle-icon">
                     <p class="circle-heading"> Communication </p>
                 </div>
             </div>
             <div class="hide">
-                <div class="small-circle" style="float: left; margin-left: 5%;">
+                <div class="small-circle sm-cr-three-two-one">
                     <img src="../icons/narrative_analysis.png" class="circle-icon">
                     <p class="small-circle-heading"> Narrative <br /> Strategy</p>
                 </div>
-                <div class="small-circle" style="float: left; margin-left: 6%;">
+                <div class="small-circle sm-cr-three-two">
                     <img src="../icons/digital_and_social-media_strategy.png" class="circle-icon">
                     <p class="small-circle-heading"> Digital and <br /> Social Media <br /> Strategy</p>
                 </div>
-                <div class="small-circle" style="float: right; margin-right: 30%;">
+                <div class="small-circle sm-cr-three-three">
                     <img src="../icons/media-relation-and-publicity.png" class="circle-icon">
                     <p class="small-circle-heading"> Media Relations <br /> and Publicity</p>
                 </div>
