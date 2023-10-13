@@ -330,12 +330,16 @@ section {
   }
 
   .circle {
-    width: 6.25rem;
-    height: 6.25rem;
+    width: 5.25rem;
+    height: 5.25rem;
   }
 
   .circle-heading {
     margin-top: 7rem;
+    font-size: 0.75rem;
+  }
+
+  .circle-title {
     font-size: 0.75rem;
   }
 
