@@ -324,7 +324,7 @@ section {
   color: black;
 }
 
-@media (min-width: 250px) and (max-width: 420px) {
+@media (min-width: 250px) and (max-width: 400px) {
   ::-webkit-scrollbar {
     display: none;
   }
@@ -553,7 +553,7 @@ section {
   }
 }
 
-@media (min-width: 425px) and (max-width: 760px) {
+@media (min-width: 400px) and (max-width: 760px) {
   ::-webkit-scrollbar {
     display: none;
   }

@@ -15,6 +15,28 @@
         <img src="../images/logo.png" class="logo" />
     </div>
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const elements = document.querySelectorAll('.show1, .show2, .show3');
+
+            elements.forEach((element) => {
+                element.addEventListener('mouseover', function () {
+                    elements.forEach((otherElement) => {
+                        if (otherElement !== element) {
+                            otherElement.style.display = 'none';
+                        }
+                    });
+                });
+
+                element.addEventListener('mouseout', function () {
+                    elements.forEach((otherElement) => {
+                        if (otherElement !== element) {
+                            otherElement.style.display = 'block';
+                        }
+                    });
+                });
+            });
+        });
+
         document.addEventListener("DOMContentLoaded", function () {
             const hambMenu = document.querySelector(".hamb-menu");
             const dropdownContent = document.querySelector(".topnav-dropdown-content");
@@ -179,71 +201,48 @@
     </section>
 
     <!-- circle section start -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const elements = document.querySelectorAll('.show1, .show2, .show3');
-
-            elements.forEach((element) => {
-                element.addEventListener('mouseover', function () {
-                    elements.forEach((otherElement) => {
-                        if (otherElement !== element) {
-                            otherElement.style.display = 'none';
-                        }
-                    });
-                });
-
-                element.addEventListener('mouseout', function () {
-                    elements.forEach((otherElement) => {
-                        if (otherElement !== element) {
-                            otherElement.style.display = 'block';
-                        }
-                    });
-                });
-            });
-        });
-    </script>
     <section>
-        <div class="element" style="margin-top: 7rem;">
+        <div class="element circle-content">
             <div class="show1" id="show1">
-                <div class="circle" style="float: left; margin-right: 6%;">
+                <div class="circle sm-cr-one">
                     <img class="circle-icon" src="../icons/analytics_and_strategy.png">
                     <p class="circle-heading"> Analytics and <br /> Strategy </p>
                 </div>
             </div>
             <div class="hide">
-                <div class="small-circle" style="float: left; margin-right: 6%;">
+                <div class="small-circle sm-cr-one-one">
                     <img src="../icons/communication_analytics.png" class="circle-icon">
                     <p class="small-circle-heading"> Communication <br /> Analytics</p>
                 </div>
-                <div class="small-circle" style="float: left; margin-right: 6%;">
+                <div class="small-circle sm-cr-one-two">
                     <img src="../icons/measurements.png" class="circle-icon">
                     <p class="small-circle-heading"> Measurement</p>
                 </div>
-                <div class="small-circle" style="float: left; margin-right: 6%;">
+                <div class="small-circle sm-cr-one-three">
                     <img src="../icons/strategy_development.png" class="circle-icon">
                     <p class="small-circle-heading"> Strategy <br /> Development</p>
                 </div>
             </div>
             <div class="show2" id="show2">
-                <div class="circle" style="float: right; margin-left: 6%;">
+                <div class="circle sm-cr-two">
                     <img src="../icons/dissemination.png" class="circle-icon">
                     <p class="circle-heading"> Dissemination</p>
                 </div>
             </div>
             <div class="hide">
-                <div class="small-circle" style="float: right; margin-left: 6%;">
+                <div class="small-circle sm-cr-two-one">
                     <img src="../icons/crisis_communication.png" class="circle-icon">
                     <p class="small-circle-heading"> Crisis <br /> Communication</p>
                 </div>
-                <div class="small-circle" style="float: right; margin-left: 6%;">
+                <div class="small-circle sm-cr-two-two">
                     <img src="../icons/Internal_communication.png" class="circle-icon">
                     <p class="small-circle-heading"> Internal <br />Communication</p>
                 </div>
-                <div class="small-circle" style="float: right; margin-left: 6%;">
+                <div class="small-circle sm-cr-two-three">
                     <img src="../icons/reputation_managements.png" class="circle-icon">
                     <p class="small-circle-heading"> Reputation <br /> Management</p>
                 </div>
-                <div class="small-circle" style="float: right; margin-left: 6%;">
+                <div class="small-circle sm-cr-two-four">
                     <img src="../icons/media_relation.png" class="circle-icon">
                     <p class="small-circle-heading"> Media <br /> Relation/p>
                 </div>
@@ -251,21 +250,21 @@
             <div style="width: 100%;">
                 <div class="element-two">
                     <div class="show3">
-                        <div class="circle" style="float: left; left: 21.2%;">
+                        <div class="circle sm-cr-three">
                             <img src="../icons/narrative.png" class="circle-icon">
                             <p class="circle-heading"> Narrative</p>
                         </div>
                     </div>
                     <div class="hide">
-                        <div class="small-circle" style="float: left; margin-right: 4.5%;">
+                        <div class="small-circle sm-cr-three-one">
                             <img src="../icons/messaging_nd_storytelling.png" class="circle-icon">
                             <p class="small-circle-heading"> Messaging and<br /> Story Telling</p>
                         </div>
-                        <div class="small-circle" style="float: left;">
+                        <div class="small-circle sm-cr-three-two">
                             <img src="../icons/content_creation.png" class="circle-icon">
                             <p class="small-circle-heading"> Content <br /> Creation</p>
                         </div>
-                        <div class="small-circle" style="float: right; margin-right: 28.2%;">
+                        <div class="small-circle sm-cr-three-three">
                             <img src="../icons/speech_writing_and_presentation.png" class="circle-icon">
                             <p class="small-circle-heading"> Speech Writing <br /> and <br /> Presentation</p>
                         </div>
