@@ -15,6 +15,12 @@
         <img src="./images/logo.png" class="logo"></img>
     </div>
     <script>
+        window.addEventListener('scroll', function () {
+            const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            const gradientColor = `linear-gradient(180deg, #FEF9FF ${scrollPercentage}%, #FFB36D 100%)`;
+            document.querySelector('.page').style.background = gradientColor;
+        });
+
         document.addEventListener("DOMContentLoaded", function () {
             const hambMenu = document.querySelector(".hamb-menu");
             const dropdownContent = document.querySelector(".topnav-dropdown-content");
@@ -100,6 +106,80 @@
                     event.target !== serviceHeading
                 ) {
                     toggleDropdownServices();
+                }
+            });
+            document.getElementById('Box').addEventListener('click', function () {
+                if (window.innerWidth >= 780) {
+                    const RealBox = document.getElementById("RealBox");
+                    const popup = document.getElementById("popup");
+                    const form = document.getElementById("contactForm");
+                    const submitButton = document.getElementById("submitButton");
+                    const emailInput = document.getElementById('email');
+                    const emailError = document.getElementById('email-error');
+
+                    function toggleDialogue() {
+                        RealBox.style.display = RealBox.style.display === "block" ? "none" : "block";
+                        if (RealBox.style.display === "block") {
+                            form.reset();
+                            clearEmailError();
+                        }
+                    }
+
+                    function clearEmailError() {
+                        emailError.textContent = '';
+                    }
+
+                    function showPopup() {
+                        popup.style.display = "block";
+                        setTimeout(() => closePopup(), 2000);
+                    }
+
+                    function closePopup() {
+                        popup.style.display = "none";
+                    }
+
+                    emailInput.addEventListener('blur', function () {
+                        const email = emailInput.value;
+                        emailError.textContent = validateEmail(email) ? '' : 'Please enter a valid email address.';
+                    });
+
+                    function validateEmail(email) {
+                        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+                        return emailPattern.test(email);
+                    }
+
+                    submitButton.addEventListener("click", function () {
+                        if (isFormValid()) {
+                            showPopup();
+                            toggleDialogue();
+                        } else {
+                            alert("Please fill in all required fields correctly.");
+                        }
+                    });
+
+                    function isFormValid() {
+                        const name = document.getElementById("name").value;
+                        const email = emailInput.value;
+                        const message = document.getElementById("message").value;
+                        return name.trim() !== "" && validateEmail(email) && message.trim() !== "";
+                    }
+
+                    window.addEventListener("click", function (event) {
+                        if (RealBox.style.display === "block" && !RealBox.contains(event.target) && event.target !== Box) {
+                            toggleDialogue();
+                        }
+                    });
+
+                    const Box = document.getElementById("Box");
+                    const closeBtn = document.getElementById("closeBtn");
+
+                    Box.addEventListener("click", toggleDialogue);
+                    closeBtn.addEventListener("click", function () {
+                        RealBox.style.display = "none";
+                    });
+
+                } else {
+                    window.location.href = './contact/contact.html';
                 }
             });
         });
@@ -212,16 +292,6 @@
         </div>
     </section>
 
-
-    <!-- linear gradient -->
-    <script>
-        window.addEventListener('scroll', function () {
-            const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-            const gradientColor = `linear-gradient(180deg, #FEF9FF ${scrollPercentage}%, #FFB36D 100%)`;
-            document.querySelector('.page').style.background = gradientColor;
-        });
-    </script>
-
     <!-- footer section start -->
     <div class="footer" id="contact">
         <div class="question-box">
@@ -275,73 +345,7 @@
                 <p>Your message has been submitted successfully! We'll be in touch.</p>
             </div>
         </div>
-        <script>
-            const RealBox = document.getElementById("RealBox");
-            const popup = document.getElementById("popup");
-            const form = document.getElementById("contactForm");
-            const submitButton = document.getElementById("submitButton");
-            const emailInput = document.getElementById('email');
-            const emailError = document.getElementById('email-error');
 
-            function toggleDialogue() {
-                RealBox.style.display = RealBox.style.display === "block" ? "none" : "block";
-                if (RealBox.style.display === "block") {
-                    form.reset();
-                    clearEmailError();
-                }
-            }
-
-            function clearEmailError() {
-                emailError.textContent = '';
-            }
-
-            function showPopup() {
-                popup.style.display = "block";
-                setTimeout(() => closePopup(), 2000);
-            }
-
-            function closePopup() {
-                popup.style.display = "none";
-            }
-
-            emailInput.addEventListener('blur', function () {
-                const email = emailInput.value;
-                emailError.textContent = validateEmail(email) ? '' : 'Please enter a valid email address.';
-            });
-
-            function validateEmail(email) {
-                const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-                return emailPattern.test(email);
-            }
-
-            submitButton.addEventListener("click", function () {
-                if (isFormValid()) {
-                    showPopup();
-                    toggleDialogue();
-                } else {
-                    alert("Please fill in all required fields correctly.");
-                }
-            });
-
-            function isFormValid() {
-                const name = document.getElementById("name").value;
-                const email = emailInput.value;
-                const message = document.getElementById("message").value;
-                return name.trim() !== "" && validateEmail(email) && message.trim() !== "";
-            }
-
-            window.addEventListener("click", function (event) {
-                if (RealBox.style.display === "block" && !RealBox.contains(event.target) && event.target !== Box) {
-                    toggleDialogue();
-                }
-            });
-
-            const Box = document.getElementById("Box");
-            const closeBtn = document.getElementById("closeBtn");
-
-            Box.addEventListener("click", toggleDialogue);
-            closeBtn.addEventListener("click", toggleDialogue);
-        </script>
         <div class="footer-bottom">
             <div class="footer-left">
                 <img src="./images/footer-logo.png" class="footer-logo" />

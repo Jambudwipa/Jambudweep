@@ -185,10 +185,17 @@ section {
   margin-left: 6%;
 }
 
+.sm-cr-two-one,
+.sm-cr-two-two,
+.sm-cr-two-three {
+  float: right;
+  margin-right: 6%;
+}
+
+.sm-cr-one-one,
+.sm-cr-one-two,
 .sm-cr-three,
 .sm-cr-three-one,
-.sm-cr-one-two,
-.sm-cr-one-one,
 .sm-cr-three-two,
 .sm-cr-three-two-one {
   float: left;
@@ -391,7 +398,7 @@ section {
   .elections-para {
     width: 90%;
     line-height: normal;
-    font-size: 0.875rem;
+    font-size: 0.75rem;
   }
 
   .element {
@@ -431,16 +438,14 @@ section {
   }
 
   .sm-cr-one-one {
-    float: left;
     margin-top: 47%;
     margin-left: -30%;
   }
 
   .sm-cr-one-two {
-    float: left;
-    margin-left: -4%;
+    margin-left: -3%;
     margin-top: 47%;
-    margin-right: 11%;
+    margin-right: 9%;
   }
 
   .sm-cr-two {
@@ -448,30 +453,28 @@ section {
   }
 
   .sm-cr-two-one {
-    float: right;
     margin-top: 50%;
-    margin-right: -26%;
+    margin-right: -30%;
   }
 
   .sm-cr-two-two {
-    float: right;
-    margin-left: 8%;
+    margin-right: -4%;
     margin-top: 50%;
   }
 
   .sm-cr-two-three {
-    float: right;
     margin-top: 50%;
   }
 
   .sm-cr-three {
     margin-top: 40%;
-    margin-left: -15%;
+    margin-left: -16%;
   }
 
   .sm-cr-three-one,
   .sm-cr-three-two,
-  .sm-cr-three-two-one {
+  .sm-cr-three-two-one,
+  .sm-cr-five {
     margin-top: 40%;
   }
 
@@ -481,18 +484,13 @@ section {
   }
 
   .sm-cr-three-three {
-    float: right;
     margin-top: 40%;
     margin-right: 7%;
   }
 
   .sm-cr-four {
     margin-top: 40%;
-    margin-right: -2%;
-  }
-
-  .sm-cr-five {
-    margin-top: 40%;
+    margin-right: -3%;
   }
 
   .small-circle-heading {
@@ -629,7 +627,7 @@ section {
   .elections-para {
     width: 90%;
     line-height: normal;
-    font-size: 0.875rem;
+    font-size: 0.75rem;
   }
 
   .element {
@@ -650,7 +648,7 @@ section {
 
   .circle-center-two {
     width: 100%;
-    margin-top: 6rem;
+    margin-top: 5rem;
     margin-left: -7%;
   }
 
@@ -669,13 +667,11 @@ section {
   }
 
   .sm-cr-one-one {
-    float: left;
     margin-top: 47%;
     margin-left: -30%;
   }
 
   .sm-cr-one-two {
-    float: left;
     margin-left: -4%;
     margin-top: 47%;
     margin-right: 11%;
@@ -686,19 +682,17 @@ section {
   }
 
   .sm-cr-two-one {
-    float: right;
     margin-top: 50%;
     margin-right: -26%;
   }
 
   .sm-cr-two-two {
-    float: right;
-    margin-left: 8%;
+    margin-right: -1%;
+    margin-left: 1%;
     margin-top: 50%;
   }
 
   .sm-cr-two-three {
-    float: right;
     margin-top: 50%;
   }
 
@@ -709,12 +703,13 @@ section {
 
   .sm-cr-three-one,
   .sm-cr-three-two,
-  .sm-cr-three-two-one {
+  .sm-cr-three-two-one,
+  .sm-cr-five {
     margin-top: 40%;
   }
 
   .sm-cr-three-two-one {
-    margin-left: -2%;
+    margin-left: -3%;
     margin-right: 3%;
   }
 
@@ -725,11 +720,7 @@ section {
 
   .sm-cr-four {
     margin-top: 40%;
-    margin-right: 3%;
-  }
-
-  .sm-cr-five {
-    margin-top: 40%;
+    margin-right: 2%;
   }
 
   .small-circle-heading {

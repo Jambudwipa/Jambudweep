@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css?family=Outfit");
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  margin: 0;
+  font-family: Outfit;
+}
+
+section {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.topnav {
+  height: 3rem;
+  overflow: hidden;
+  background: #fef9ff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+
+.navbar-logo {
+  margin-top: 0.2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-left: 0.5rem;
+}
+
+.hamb-menu,
+.topnav-dropdown-close {
+  margin-top: 0.8rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  float: right;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.topnav-dropdown-content {
+  display: none;
+  position: inherit;
+  background: #fef9ff;
+  width: 100%;
+}
+
+.topnav-dropdown-content a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  text-align: right;
+  margin-right: 0.5rem;
+  padding: 8px 8px;
+  font-family: Outfit;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.navbar,
+.logo-container {
+  display: none;
+}
+
+.contact {
+  background: #fef9ff;
+  font-family: Outfit;
+}
+
+.contact-form-title {
+  margin-top: 5rem;
+  color: #fe5c24;
+  text-align: center;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 3.75rem;
+  margin-bottom: 3rem;
+}
+
+form {
+  width: 80%;
+}
+
+input {
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  color: #fe5c24;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.75rem;
+}
+
+.form-group input {
+  height: 2.625rem;
+  border-radius: 0.3125rem;
+  border: none;
+  background: #fff;
+  border-bottom: 1px solid #fe5c24;
+  background-repeat: no-repeat;
+  background-position: 98%;
+  outline: none;
+}
+
+textarea[type="text"]:focus,
+input:focus {
+  border: 1px solid #fe5c24;
+}
+
+.form-group textarea {
+  height: 6rem;
+  border-radius: 0.3125rem;
+  border: none;
+  outline: none;
+  background: #fff;
+  border-bottom: 1px solid #fe5c24;
+  background-repeat: no-repeat;
+  background-position: top 2% right 1%;
+  vertical-align: top;
+}
+
+.form-button {
+  margin-top: 2rem;
+  cursor: pointer;
+  color: #fff;
+  height: 3rem;
+  border-radius: 0.5rem;
+  border-color: #fe5c24;
+  background: #fe5c24;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
