@@ -133,7 +133,7 @@ input:focus {
 }
 
 .form-button {
-  margin-top: 2rem;
+  margin: 2rem 0;
   cursor: pointer;
   color: #fff;
   height: 3rem;

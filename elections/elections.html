@@ -15,6 +15,28 @@
         <img src="../images/logo.png" class="logo" />
     </div>
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const elements = document.querySelectorAll('.show1, .show2');
+
+            elements.forEach((element) => {
+                element.addEventListener('mouseover', function () {
+                    elements.forEach((otherElement) => {
+                        if (otherElement !== element) {
+                            otherElement.style.display = 'none';
+                        }
+                    });
+                });
+
+                element.addEventListener('mouseout', function () {
+                    elements.forEach((otherElement) => {
+                        if (otherElement !== element) {
+                            otherElement.style.display = 'block';
+                        }
+                    });
+                });
+            });
+        });
+
         document.addEventListener("DOMContentLoaded", function () {
             const hambMenu = document.querySelector(".hamb-menu");
             const dropdownContent = document.querySelector(".topnav-dropdown-content");
@@ -180,29 +202,6 @@
     </section>
 
     <!-- circle section start -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const elements = document.querySelectorAll('.show1, .show2');
-
-            elements.forEach((element) => {
-                element.addEventListener('mouseover', function () {
-                    elements.forEach((otherElement) => {
-                        if (otherElement !== element) {
-                            otherElement.style.display = 'none';
-                        }
-                    });
-                });
-
-                element.addEventListener('mouseout', function () {
-                    elements.forEach((otherElement) => {
-                        if (otherElement !== element) {
-                            otherElement.style.display = 'block';
-                        }
-                    });
-                });
-            });
-        });
-    </script>
     <section>
         <div class="element">
             <div class="show1" id="show1">
