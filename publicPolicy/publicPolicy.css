@@ -434,6 +434,7 @@ section {
   }
 
   .circle-content {
+    height: 10rem;
     width: 90%;
     margin-top: 2rem;
   }
@@ -671,6 +672,7 @@ section {
   }
 
   .circle-content {
+    height: 10rem;
     width: 90%;
     margin-top: 2rem;
   }
