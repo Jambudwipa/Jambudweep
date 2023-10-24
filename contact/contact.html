@@ -150,6 +150,7 @@
                 <label for="message" style="margin-right: 1.6rem;">Message:*</label>
                 <textarea type="text" id="message" name="Message" rows="4"
                     style="margin-top: 1rem; background-image: url(../images/message.svg);" required></textarea>
+                <div class="alphabet-count"><span id="alphabet-count">0</span> / 250</div>
             </div>
 
             <div id="error" class="error-message"></div>
@@ -157,6 +158,24 @@
             <div class="form-group" style="margin-top: 1rem;">
                 <button class="form-button" type="submit" id="submitButton">Submit</button>
             </div>
+            <script>
+                const textarea = document.getElementById('message');
+                const alphabetCount = document.getElementById('alphabet-count');
+                const maxAlphabets = 250;
+
+                textarea.addEventListener('input', function () {
+                    const text = textarea.value;
+                    const alphabetCountValue = text.replace(/[^a-zA-Z]/g, '').length;
+
+                    if (alphabetCountValue <= maxAlphabets) {
+                        alphabetCount.textContent = alphabetCountValue;
+                    } else {
+                        const truncatedText = text.replace(/[^a-zA-Z]/g, '').slice(0, maxAlphabets);
+                        textarea.value = truncatedText;
+                        alphabetCount.textContent = maxAlphabets;
+                    }
+                });
+            </script>
         </form>
     </section>
 </body>
