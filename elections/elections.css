@@ -185,26 +185,38 @@ section {
   margin-left: 6%;
 }
 
-.sm-cr-two-one,
+.sm-cr-two-one {
+  float: right;
+  margin-right: 2%;
+}
+
 .sm-cr-two-two,
 .sm-cr-two-three {
   float: right;
   margin-right: 6%;
 }
 
-.sm-cr-one-one,
+.sm-cr-one-one {
+  float: left;
+  margin-left: 2%;
+}
+
 .sm-cr-one-two,
 .sm-cr-three,
-.sm-cr-three-one,
-.sm-cr-three-two,
-.sm-cr-three-two-one {
+.sm-cr-three-two {
   float: left;
   margin-left: 6%;
 }
 
+.sm-cr-three-one,
+.sm-cr-three-two-one {
+  float: left;
+  margin-left: 5%;
+}
+
 .sm-cr-three-three {
   float: right;
-  margin-right: 30%;
+  margin-right: 32%;
 }
 
 .sm-cr-four {
@@ -481,7 +493,7 @@ section {
 
   .sm-cr-three-two-one {
     margin-left: -5%;
-    margin-right: 2%;
+    margin-right: 0%;
   }
 
   .sm-cr-three-three {
@@ -554,7 +566,7 @@ section {
   }
 }
 
-@media (min-width: 400px) and (max-width: 760px) {
+@media (min-width: 401px) and (max-width: 760px) {
   ::-webkit-scrollbar {
     display: none;
   }
@@ -788,9 +800,13 @@ section {
   }
 }
 
-@media (min-width: 760px) and (max-width: 1096px) {
+@media (min-width: 761px) and (max-width: 1096px) {
   ::-webkit-scrollbar {
     display: none;
+  }
+
+  .logo {
+    margin-left: 2%;
   }
 
   .topnav {
@@ -864,9 +880,25 @@ section {
   .circle-center-two {
     margin-top: 3rem;
   }
+
+  .sm-cr-three {
+    margin-left: -5%;
+  }
+
+  .sm-cr-four {
+    margin-right: 7%;
+  }
+
+  .sm-cr-three-two-one {
+    margin-left: -5%;
+  }
+
+  .sm-cr-three-three {
+    margin-right: 23%;
+  }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1097px) {
   .footer-center-mobile-view {
     display: none;
   }

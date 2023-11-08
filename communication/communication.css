@@ -201,16 +201,18 @@ section {
 
 .sm-cr-three-one {
   float: left;
+  margin-left: -6%;
+  margin-right: 7%;
 }
 
 .sm-cr-three-two {
   float: left;
-  margin-left: 6%;
+  margin-right: 7%;
 }
 
 .sm-cr-three-three {
   float: right;
-  margin-right: 10%;
+  margin-right: 8%;
 }
 
 .small-circle {
@@ -322,7 +324,7 @@ section {
   color: black;
 }
 
-@media (max-width: 420px) {
+@media (min-width: 250px) and (max-width: 400px) {
   ::-webkit-scrollbar {
     display: none;
   }
@@ -451,21 +453,19 @@ section {
   }
 
   .sm-cr-two-one {
-    margin-right: -33%;
+    margin-right: -32%;
   }
 
   .sm-cr-two-two {
-    margin-right: -10%;
-    margin-left: 7%;
+    margin-right: -7%;
   }
 
   .sm-cr-two-three {
-    margin-left: 7%;
-    margin-right: -3%;
+    margin-right: -2%;
   }
 
   .sm-cr-two-four {
-    margin-right: -3%;
+    margin-left: -2%;
   }
 
   .sm-cr-three {
@@ -475,12 +475,12 @@ section {
   .sm-cr-three-one,
   .sm-cr-three-two,
   .sm-cr-three-three {
-    margin-top: 47%;
+    margin-top: 48%;
   }
 
   .sm-cr-three-one {
     margin-left: -15%;
-    margin-right: 6%;
+    margin-right: 10%;
   }
 
   .sm-cr-three-three {
@@ -542,7 +542,7 @@ section {
   }
 }
 
-@media (min-width: 421px) and (max-width: 760px) {
+@media (min-width: 401px) and (max-width: 760px) {
   ::-webkit-scrollbar {
     display: none;
   }
@@ -670,17 +670,19 @@ section {
   }
 
   .sm-cr-two-one {
-    margin-right: -30%;
+    margin-right: -32%;
   }
 
   .sm-cr-two-two {
-    margin-right: -5%;
-    margin-left: 5%;
+    margin-right: -7%;
   }
 
   .sm-cr-two-three {
-    margin-left: 5%;
-    margin-right: 1%;
+    margin-right: -2%;
+  }
+
+  .sm-cr-two-four {
+    margin-left: -2%;
   }
 
   .sm-cr-three {
@@ -693,14 +695,9 @@ section {
     margin-top: 45%;
   }
 
-  .sm-cr-three-one {
-    margin-left: -8%;
-    margin-right: 3%;
-  }
-
   .sm-cr-three-three {
-    margin-left: 3%;
-    margin-right: -4%;
+    margin-left: 0;
+    margin-right: -8%;
   }
 
   .footer {
@@ -760,6 +757,10 @@ section {
 @media (min-width: 761px) and (max-width: 1096px) {
   ::-webkit-scrollbar {
     display: none;
+  }
+
+  .logo {
+    margin-left: 2%;
   }
 
   .topnav {
@@ -841,9 +842,17 @@ section {
   .sm-cr-two-four {
     margin-left: 0%;
   }
+
+  .sm-cr-three-one {
+    margin-left: -18%;
+  }
+
+  .sm-cr-three-three {
+    margin-right: 0%;
+  }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1097px) {
   .footer-center-mobile-view {
     display: none;
   }
