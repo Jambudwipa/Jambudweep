@@ -31,158 +31,105 @@
             const arrowPath = servicesSection.querySelector("path");
             const serviceHeading = servicesSection.nextElementSibling;
 
-            serviceHeading.addEventListener("click", function (event) {
+            const toggleDropdown = () => {
+                const isOpen = dropdownContent.style.display === "block";
+                dropdownContent.style.display = isOpen ? "none" : "block";
+                logo.style.display = isOpen ? "block" : "none";
+                hambMenu.style.marginTop = isOpen ? "-7.5%" : "0";
+                dropdownServicesContent.style.display = "none";
+                arrowPath.style.fill = isOpen ? "#353535" : "#FE5C24";
+                serviceHeading.style.color = isOpen ? "black" : "#FE5C24";
+            };
+
+            const toggleDropdownServices = () => {
+                const isOpen = dropdownServicesContent.style.display === "block";
+                dropdownServicesContent.style.display = isOpen ? "none" : "block";
+                arrowPath.style.fill = isOpen ? "#353535" : "#FE5C24";
+                serviceHeading.style.color = isOpen ? "black" : "#FE5C24";
+            };
+
+            hambMenu.addEventListener("click", toggleDropdown);
+            dropdownClose.addEventListener("click", toggleDropdown);
+            servicesSection.addEventListener("click", (event) => {
                 event.stopPropagation();
                 toggleDropdownServices();
-                if (dropdownServicesContent.style.display === "block") {
-                    arrowPath.style.fill = "#FE5C24";
-                    serviceHeading.style.color = "#FE5C24";
-                } else {
-                    arrowPath.style.fill = "#353535";
-                    serviceHeading.style.color = "black";
-                }
             });
 
-            hambMenu.addEventListener("click", function () {
-                toggleDropdown();
-            });
-
-            dropdownClose.addEventListener("click", function () {
-                toggleDropdown();
-            });
-
-            servicesSection.addEventListener("click", function (event) {
-                event.stopPropagation();
-                toggleDropdownServices();
-                if (dropdownServicesContent.style.display === "block") {
-                    arrowPath.style.fill = "#FE5C24";
-                    serviceHeading.style.color = "#FE5C24";
-                } else {
-                    arrowPath.style.fill = "#353535";
-                    serviceHeading.style.color = "black";
-                }
-            });
-
-            function toggleDropdown() {
-                if (dropdownContent.style.display === "block") {
-                    dropdownContent.style.display = "none";
-                    logo.style.display = "block";
-                    hambMenu.style.marginTop = "-7.5%";
-                } else {
-                    dropdownContent.style.display = "block";
-                    logo.style.display = "none";
-                    hambMenu.style.marginTop = "0";
-                    dropdownServicesContent.style.display = "none";
-                    arrowPath.style.fill = "#353535";
-                    serviceHeading.style.color = "black";
-                }
-            }
-
-            function toggleDropdownServices() {
-                if (dropdownServicesContent.style.display === "block") {
-                    dropdownServicesContent.style.display = "none";
-                    arrowPath.style.fill = "#353535";
-                    serviceHeading.style.color = "black";
-                } else {
-                    dropdownServicesContent.style.display = "block";
-                    arrowPath.style.fill = "#FE5C24";
-                    serviceHeading.style.color = "#FE5C24";
-                }
-            }
-
-            document.addEventListener("click", function (event) {
-                if (
-                    dropdownContent.style.display === "block" &&
-                    !dropdownContent.contains(event.target) &&
-                    event.target !== hambMenu
-                ) {
+            document.addEventListener("click", (event) => {
+                if (dropdownContent.style.display === "block" && !dropdownContent.contains(event.target) && event.target !== hambMenu) {
                     toggleDropdown();
                 }
 
-                if (
-                    dropdownServicesContent.style.display === "block" &&
-                    !dropdownServicesContent.contains(event.target) &&
-                    event.target !== servicesSection &&
-                    event.target !== serviceHeading
-                ) {
+                if (dropdownServicesContent.style.display === "block" && !dropdownServicesContent.contains(event.target) && event.target !== servicesSection && event.target !== serviceHeading) {
                     toggleDropdownServices();
                 }
             });
-            document.getElementById('Box').addEventListener('click', function () {
-                if (window.innerWidth >= 780) {
-                    const RealBox = document.getElementById("RealBox");
-                    const popup = document.getElementById("popup");
-                    const form = document.getElementById("contactForm");
-                    const submitButton = document.getElementById("submitButton");
-                    const emailInput = document.getElementById('email');
-                    const emailError = document.getElementById('email-error');
 
-                    function toggleDialogue() {
-                        RealBox.style.display = RealBox.style.display === "block" ? "none" : "block";
-                        if (RealBox.style.display === "block") {
-                            form.reset();
-                            clearEmailError();
-                        }
-                    }
+            const Box = document.getElementById('Box');
+            if (window.innerWidth >= 768) {
+                const RealBox = document.getElementById("RealBox");
+                const popup = document.getElementById("popup");
+                const form = document.getElementById("contactForm");
+                const submitButton = document.getElementById("submitButton");
+                const emailInput = document.getElementById('email');
+                const emailError = document.getElementById('email-error');
 
-                    function clearEmailError() {
+                const toggleDialogue = () => {
+                    RealBox.style.display = RealBox.style.display === "block" ? "none" : "block";
+                    if (RealBox.style.display === "block") {
+                        form.reset();
                         emailError.textContent = '';
                     }
+                };
 
-                    function showPopup() {
-                        popup.style.display = "block";
-                        setTimeout(() => closePopup(), 2000);
+                emailInput.addEventListener('blur', () => {
+                    const email = emailInput.value;
+                    emailError.textContent = validateEmail(email) ? '' : 'Please enter a valid email address.';
+                });
+
+                const showPopup = () => {
+                    popup.style.display = "block";
+                    setTimeout(() => popup.style.display = "none", 2000);
+                };
+
+                const isFormValid = () => {
+                    const name = document.getElementById("name").value;
+                    const email = emailInput.value;
+                    const message = document.getElementById("message").value;
+                    return name.trim() !== "" && validateEmail(email) && message.trim() !== "";
+                };
+
+                submitButton.addEventListener("click", () => {
+                    if (isFormValid()) {
+                        showPopup();
+                        toggleDialogue();
+                    } else {
+                        alert("Please fill in all required fields correctly.");
                     }
+                });
 
-                    function closePopup() {
-                        popup.style.display = "none";
+                window.addEventListener("click", (event) => {
+                    if (RealBox.style.display === "block" && !RealBox.contains(event.target) && event.target !== Box) {
+                        toggleDialogue();
                     }
+                });
 
-                    emailInput.addEventListener('blur', function () {
-                        const email = emailInput.value;
-                        emailError.textContent = validateEmail(email) ? '' : 'Please enter a valid email address.';
-                    });
-
-                    function validateEmail(email) {
-                        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-                        return emailPattern.test(email);
-                    }
-
-                    submitButton.addEventListener("click", function () {
-                        if (isFormValid()) {
-                            showPopup();
-                            toggleDialogue();
-                        } else {
-                            alert("Please fill in all required fields correctly.");
-                        }
-                    });
-
-                    function isFormValid() {
-                        const name = document.getElementById("name").value;
-                        const email = emailInput.value;
-                        const message = document.getElementById("message").value;
-                        return name.trim() !== "" && validateEmail(email) && message.trim() !== "";
-                    }
-
-                    window.addEventListener("click", function (event) {
-                        if (RealBox.style.display === "block" && !RealBox.contains(event.target) && event.target !== Box) {
-                            toggleDialogue();
-                        }
-                    });
-
-                    const Box = document.getElementById("Box");
-                    const closeBtn = document.getElementById("closeBtn");
-
-                    Box.addEventListener("click", toggleDialogue);
-                    closeBtn.addEventListener("click", function () {
-                        RealBox.style.display = "none";
-                    });
-
-                } else {
+                Box.addEventListener("click", toggleDialogue);
+                const closeBtn = document.getElementById("closeBtn");
+                closeBtn.addEventListener("click", () => {
+                    RealBox.style.display = "none";
+                });
+            } else {
+                Box.addEventListener('click', () => {
                     window.location.href = './contact/contact.html';
-                }
-            });
+                });
+            }
         });
+
+        function validateEmail(email) {
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            return emailPattern.test(email);
+        }
     </script>
 
     <div class="topnav">
@@ -306,7 +253,7 @@
             </span>
             <div class="contact">
                 <h1 class="contact-form-title">Let's get in contact!</h1>
-                <form action="https://formspree.io/f/xrgwozgz" method="POST" novalidate="novalidate">
+                <form action="https://formspree.io/f/xrgwozgz" method="POST" novalidate="novalidate" id="contactForm">
                     <div class="form-group">
                         <label for="name" style="margin-right: 3.4rem;">Name:*</label>
                         <input type="text" id="name" name="Name" style="background-image: url(./images/name.svg);"

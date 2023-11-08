@@ -407,9 +407,13 @@ section {
   }
 }
 
-@media (min-width: 760px) and (max-width: 1096px) {
+@media (min-width: 761px) and (max-width: 1096px) {
   ::-webkit-scrollbar {
     display: none;
+  }
+
+  .logo {
+    margin-left: 2%;
   }
 
   .topnav {
@@ -485,7 +489,7 @@ section {
   }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1097px) {
   .footer-center-mobile-view {
     display: none;
   }

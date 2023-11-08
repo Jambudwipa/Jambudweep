@@ -206,7 +206,7 @@ section {
 
 .sm-cr-four-three {
   float: right;
-  margin-right: 30%;
+  margin-right: 32%;
 }
 
 .circle {
@@ -336,7 +336,7 @@ section {
   color: black;
 }
 
-@media (max-width: 420px) {
+@media (min-width: 250px) and (max-width: 400px) {
   ::-webkit-scrollbar {
     display: none;
   }
@@ -460,11 +460,11 @@ section {
   }
 
   .sm-cr-two-one {
-    margin-right: -34%;
+    margin-right: -38%;
   }
 
   .sm-cr-two-two {
-    margin-right: -9%;
+    margin-right: -12%;
   }
 
   .sm-cr-two-three {
@@ -496,23 +496,26 @@ section {
   }
 
   .sm-cr-three-one {
-    margin-left: -13%;
+    margin-left: -15%;
     margin-right: -1%;
   }
 
   .sm-cr-three-three {
-    margin-left: 0;
-    margin-right: -3%;
+    margin-right: -5%;
   }
 
   .sm-cr-four-one,
   .sm-cr-four-two,
   .sm-cr-four-three {
-    margin-top: 40%;
+    margin-top: 42%;
   }
 
   .sm-cr-four-one {
     margin-left: -3%;
+  }
+
+  .sm-cr-four-two {
+    margin-left: 5%;
   }
 
   .sm-cr-four-three {
@@ -574,7 +577,7 @@ section {
   }
 }
 
-@media (min-width: 421px) and (max-width: 760px) {
+@media (min-width: 401px) and (max-width: 760px) {
   ::-webkit-scrollbar {
     display: none;
   }
@@ -705,6 +708,10 @@ section {
     margin-right: -6%;
   }
 
+  .sm-cr-two-four {
+    margin-left: 0;
+  }
+
   .circle-center {
     width: 100%;
     margin-top: 10rem;
@@ -742,6 +749,10 @@ section {
 
   .sm-cr-four-one {
     margin-left: 1%;
+  }
+
+  .sm-cr-four-two {
+    margin-left: 5%;
   }
 
   .sm-cr-four-three {
@@ -806,6 +817,10 @@ section {
 @media (min-width: 761px) and (max-width: 1096px) {
   ::-webkit-scrollbar {
     display: none;
+  }
+
+  .logo {
+    margin-left: 2%;
   }
 
   .topnav {
@@ -879,9 +894,26 @@ section {
   .circle-center-two {
     margin-top: 3rem;
   }
+
+  .sm-cr-two-four {
+    margin-left: 0;
+  }
+
+  .sm-cr-three-one,
+  .sm-cr-four-one {
+    margin-left: -5%;
+  }
+
+  .sm-cr-three-three {
+    margin-right: 7%;
+  }
+
+  .sm-cr-four-three {
+    margin-right: 24%;
+  }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1097px) {
   .footer-center-mobile-view {
     display: none;
   }
